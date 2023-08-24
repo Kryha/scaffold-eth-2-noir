@@ -1,38 +1,4 @@
 {
-  "LessThen": {
-    "backend": "acvm-backend-barretenberg",
-    "abi": {
-      "parameters": [
-        {
-          "name": "x",
-          "type": {
-            "kind": "field"
-          },
-          "visibility": "private"
-        },
-        {
-          "name": "y",
-          "type": {
-            "kind": "field"
-          },
-          "visibility": "public"
-        }
-      ],
-      "param_witnesses": {
-        "x": [
-          1
-        ],
-        "y": [
-          2
-        ]
-      },
-      "return_type": null,
-      "return_witnesses": []
-    },
-    "bytecode": "H4sIAAAAAAAA/+2UUW6DMAyGTaDQbhJnQD2BQ0hJ3naVodFj7yqbshlkMeg0xUF7wFJkiJLfsZ18zwBQw7flNJaWkX8hj3GmMzktXDlurLZOqD3HUExzqnnB5i7kFY1gJesH3/MBP3uVsW9Fa/IHa7INncvKOWt2FpCrCZYgftewZprSB/66yIoK806BFDWlWcTME8SetAzeum7s21Eb/YqtH5zFzg43p522zr61zpjRda73g+/R686M+m59eyetPF7LkBYWcjniXkBScACJA+lEnj/yA0gymrsAKTSQAykk0ixiSgOJP6JYIJ1ADkglpAeSEq5l8b/yTwmg3eFWkT+zub/A7cr2bcHtCr/DbU3ngNu2zXCrWDHDf2hks4gpDbdUDzJW60kuR3xUv1igV4I5nwX7KlC/VYBlMvWbc64E+7wFrck+Afd/7ugTEAAA",
-    "proving_key": null,
-    "verification_key": null
-  },
   "LessThenSignedAge": {
     "backend": "acvm-backend-barretenberg",
     "abi": {
@@ -276,40 +242,6 @@
       "return_witnesses": []
     },
     "bytecode": "H4sIAAAAAAAA/+XYZ1MTURSA4RtQFAsi9oI0ERGRLElIIiJNREREROwFIonYe2+IiIiIiAiMfvGn6jFnhzuv6AdZB2fcmbDzhOTuuacsCV+MMV9N8vB9f6ToOdOyPBZaToXnwfPhNHgBvBBOhxfBi+El8FI4A14GZ8LL4Sx4BbwSXgWvhtfAa+F18Hp4A7wRzoY3wTlwLpynljoa/b0x07Wfp79Ls2qZrnVarPVYqnlfpvldrnlcoflapXlZo/tfp/vcoPvJ1rhz9Pp5Vnz5iLcA3gwXwlvgIngrXAxvg0vg7XApvAMug/2wA5fDATgIh+AKOAxH4Ci8E66Ed8FV8G64Gq6Ba810P8pzuSZ5SB8UaL0Lta5FWr9irVOJ1qNU816m+XU0jwHNV0jzEtb9R3WflbqfKo27WuOrteKrQ7z18B64Ad4LN8L74CZ4P9wMH4Bb4INwK3wIboMPw+3wEbjDqqd7/zSax3rNV4PmpVH336T7bNb9tGjcrRpfm8bRrtfrsK53FNc/Bh+HT8An4VPwafgMfBY+B3fCXXAMPg93w3E4AV+Ae+CL8CX4MnwFvgpfg6/DN+Cb8C34NnwHvgvfg+/DD+CH8CP4MfwEfgo/g5/DvfALuA9+CffDr+AB+DU8CL+Bh+C38DD8Dh6B38Oj8Ad4DP4Ij8OfzPT9RT6v1JjkIfcBmX2Zd5lxmWuZZZlfmVmZU5nNTpOcwZhJzprMl8yUzJHMTo9JzojMhcyC9L/0vPS59Lb0s/Sw9K30qvSn9KT0ofSe9Jv0mPSV9JL0j/SM9In0Rq9J9kCf1rpfazqgtRvUGg1pLYY15yOa21HN4Zjmalxz4uZnwiQ/k6Xqg0eKnmv07J/d4fistQL+imAwHi6POwGny18ejUVC/mAoVhFxIk4oEuoujwQC8UgwEo7GomF/1AkG4k4iFA0kdLEJb+Jy5McMW//X1/6xfoq15qSep6zn0q06uq9N07PUwq25fI7Pst7ns84+a40s6z0zvcb3i3XSrefc92dYsRjvcuJPs67r1ZoZ1ppeB+y4wzhpJVMshczENVP/wrXdtbwcyNmu9dm7Pfp/l78/jTOeSEiozqSHe57ysK4e5e+nG5jPo/y5e570sM61us7//sdd5rDDqpfcS+bynzX5Zm6/nNcZb79Musc3xHiT2TEVAAA=",
-    "proving_key": null,
-    "verification_key": null
-  },
-  "NotEq": {
-    "backend": "acvm-backend-barretenberg",
-    "abi": {
-      "parameters": [
-        {
-          "name": "x",
-          "type": {
-            "kind": "field"
-          },
-          "visibility": "private"
-        },
-        {
-          "name": "y",
-          "type": {
-            "kind": "field"
-          },
-          "visibility": "public"
-        }
-      ],
-      "param_witnesses": {
-        "x": [
-          1
-        ],
-        "y": [
-          2
-        ]
-      },
-      "return_type": null,
-      "return_witnesses": []
-    },
-    "bytecode": "H4sIAAAAAAAA/7WTMRLEIAhFMYkp9ywgGrHbq6yz5v5H2JkdCyaxC9LgWDw+H9gBwMM91p7fPeOzIKdYjEeMLYdGTB8MpUrCmOohJJQkfYMwN4mSSy0ZC0VudKbCZ4cthqzVrsc/yw28dMZeWmrWerfBexnsxD6hJ7jUufr4GvyZFp8xpG0C14Pd8s/q29vPCBXypvmpDx7sD8opnfqIfsM1RNtxBQAA",
     "proving_key": null,
     "verification_key": null
   }

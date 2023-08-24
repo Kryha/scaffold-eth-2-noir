@@ -5,7 +5,7 @@ const contracts = {
       name: "localhost",
       contracts: {
         BalloonToken: {
-          address: "0xB7f8BC63BbcaD18155201308C8f3540b07f84F5e",
+          address: "0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0",
           abi: [
             {
               inputs: [],
@@ -285,7 +285,7 @@ const contracts = {
           ],
         },
         BalloonVendor: {
-          address: "0xA51c1fc2f0D1a1b8494Ed1FE312d7C3a78Ed91C0",
+          address: "0xCf7Ed3AccA5a467e9e704C703E8D87F634fB0Fc9",
           abi: [
             {
               inputs: [
@@ -562,174 +562,8 @@ const contracts = {
             },
           ],
         },
-        VerifierLessThen: {
-          address: "0x2279B7A0a67DB372996a5FaB50D91eAA73d2eBe6",
-          abi: [
-            {
-              inputs: [],
-              name: "EC_SCALAR_MUL_FAILURE",
-              type: "error",
-            },
-            {
-              inputs: [],
-              name: "MOD_EXP_FAILURE",
-              type: "error",
-            },
-            {
-              inputs: [],
-              name: "PROOF_FAILURE",
-              type: "error",
-            },
-            {
-              inputs: [
-                {
-                  internalType: "uint256",
-                  name: "expected",
-                  type: "uint256",
-                },
-                {
-                  internalType: "uint256",
-                  name: "actual",
-                  type: "uint256",
-                },
-              ],
-              name: "PUBLIC_INPUT_COUNT_INVALID",
-              type: "error",
-            },
-            {
-              inputs: [],
-              name: "PUBLIC_INPUT_GE_P",
-              type: "error",
-            },
-            {
-              inputs: [],
-              name: "PUBLIC_INPUT_INVALID_BN128_G1_POINT",
-              type: "error",
-            },
-            {
-              inputs: [],
-              name: "getVerificationKeyHash",
-              outputs: [
-                {
-                  internalType: "bytes32",
-                  name: "",
-                  type: "bytes32",
-                },
-              ],
-              stateMutability: "pure",
-              type: "function",
-            },
-            {
-              inputs: [
-                {
-                  internalType: "bytes",
-                  name: "_proof",
-                  type: "bytes",
-                },
-                {
-                  internalType: "bytes32[]",
-                  name: "_publicInputs",
-                  type: "bytes32[]",
-                },
-              ],
-              name: "verify",
-              outputs: [
-                {
-                  internalType: "bool",
-                  name: "",
-                  type: "bool",
-                },
-              ],
-              stateMutability: "view",
-              type: "function",
-            },
-          ],
-        },
         VerifierLessThenSignedAge: {
-          address: "0x8A791620dd6260079BF849Dc5567aDC3F2FdC318",
-          abi: [
-            {
-              inputs: [],
-              name: "EC_SCALAR_MUL_FAILURE",
-              type: "error",
-            },
-            {
-              inputs: [],
-              name: "MOD_EXP_FAILURE",
-              type: "error",
-            },
-            {
-              inputs: [],
-              name: "PROOF_FAILURE",
-              type: "error",
-            },
-            {
-              inputs: [
-                {
-                  internalType: "uint256",
-                  name: "expected",
-                  type: "uint256",
-                },
-                {
-                  internalType: "uint256",
-                  name: "actual",
-                  type: "uint256",
-                },
-              ],
-              name: "PUBLIC_INPUT_COUNT_INVALID",
-              type: "error",
-            },
-            {
-              inputs: [],
-              name: "PUBLIC_INPUT_GE_P",
-              type: "error",
-            },
-            {
-              inputs: [],
-              name: "PUBLIC_INPUT_INVALID_BN128_G1_POINT",
-              type: "error",
-            },
-            {
-              inputs: [],
-              name: "getVerificationKeyHash",
-              outputs: [
-                {
-                  internalType: "bytes32",
-                  name: "",
-                  type: "bytes32",
-                },
-              ],
-              stateMutability: "pure",
-              type: "function",
-            },
-            {
-              inputs: [
-                {
-                  internalType: "bytes",
-                  name: "_proof",
-                  type: "bytes",
-                },
-                {
-                  internalType: "bytes32[]",
-                  name: "_publicInputs",
-                  type: "bytes32[]",
-                },
-              ],
-              name: "verify",
-              outputs: [
-                {
-                  internalType: "bool",
-                  name: "",
-                  type: "bool",
-                },
-              ],
-              stateMutability: "view",
-              type: "function",
-            },
-          ],
-        },
-        VerifierNotEq: {
-          address: "0x610178dA211FEF7D417bC0e6FeD39F05609AD788",
+          address: "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512",
           abi: [
             {
               inputs: [],
@@ -812,7 +646,7 @@ const contracts = {
           ],
         },
         YourContract: {
-          address: "0xa513E6E4b8f2a923D98304ec87F64353C4D5C853",
+          address: "0x5FbDB2315678afecb367f032d93F642f64180aa3",
           abi: [
             {
               inputs: [

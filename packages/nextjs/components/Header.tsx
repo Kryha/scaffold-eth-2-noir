@@ -2,14 +2,7 @@ import React, { useCallback, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import {
-  Bars3Icon,
-  BeakerIcon,
-  BugAntIcon,
-  CpuChipIcon,
-  MagnifyingGlassIcon,
-  SparklesIcon,
-} from "@heroicons/react/24/outline";
+import { Bars3Icon, BeakerIcon, BugAntIcon, MagnifyingGlassIcon, SparklesIcon } from "@heroicons/react/24/outline";
 import { FaucetButton, RainbowKitCustomConnectButton } from "~~/components/scaffold-eth";
 import { useOutsideClick } from "~~/hooks/scaffold-eth";
 
@@ -53,12 +46,6 @@ export const Header = () => {
         </NavLink>
       </li>
       <li>
-        <NavLink href="/debug-noir">
-          <CpuChipIcon className="h-4 w-4" />
-          Debug Circuits
-        </NavLink>
-      </li>
-      <li>
         <NavLink href="/example-ui">
           <SparklesIcon className="h-4 w-4" />
           Example UI
@@ -68,12 +55,6 @@ export const Header = () => {
         <NavLink href="/example-zk">
           <BeakerIcon className="h-4 w-4" />
           Example UI ZK
-        </NavLink>
-      </li>
-      <li>
-        <NavLink href="/failing-zk">
-          <BeakerIcon className="h-4 w-4" />
-          failing ZK
         </NavLink>
       </li>
       <li>

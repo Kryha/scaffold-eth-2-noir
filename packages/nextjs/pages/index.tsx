@@ -37,13 +37,6 @@ const Home: NextPage = () => {
             </div>
             <div className="flex flex-col bg-base-100 px-10 py-10 text-center items-center max-w-xs rounded-3xl">
               <CpuChipIcon className="h-8 w-8 fill-secondary" />
-              <p>
-                Tinker with your ZK-circuit using the{" "}
-                <Link href="/debug-noir" passHref className="link">
-                  Debug Circuit
-                </Link>{" "}
-                tab.
-              </p>
             </div>
             <div className="flex flex-col bg-base-100 px-10 py-10 text-center items-center max-w-xs rounded-3xl">
               <SparklesIcon className="h-8 w-8 fill-secondary" />
