@@ -22,6 +22,7 @@ export const AgeRestrictedContractExecutor = () => {
         <input
           type="text"
           placeholder="proof-of-required-birthyear"
+          value={proof}
           onChange={e => setProof(e.target.value as TProof)}
         />
         <button className="border-2 border-black" onClick={() => writeAsync()} disabled={isLoading}>

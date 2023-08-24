@@ -1,6 +1,7 @@
+import { generateProof } from "./useProofGenerator";
 import { notification } from "~~/utils/scaffold-eth";
 
-type TWithNotificationsFunc = (proofGeneration: Promise<string>) => Promise<string>;
+type TWithNotificationsFunc = (proofGeneration: ReturnType<typeof generateProof>) => Promise<string>;
 
 const ProofNotification = ({ message }: { message: string }) => {
   return (
@@ -16,7 +17,7 @@ export const useProvingNotifications = (): TWithNotificationsFunc => {
     let res = "";
     try {
       notificationId = notification.loading(<ProofNotification message="Generating proof..." />);
-      res = await proofGeneration;
+      res = (await proofGeneration).proof;
       notification.remove(notificationId);
       notification.success(<ProofNotification message="Proof generated successfully!" />, {
         icon: "🎉",

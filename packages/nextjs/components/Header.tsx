@@ -71,6 +71,12 @@ export const Header = () => {
         </NavLink>
       </li>
       <li>
+        <NavLink href="/failing-zk">
+          <BeakerIcon className="h-4 w-4" />
+          failing ZK
+        </NavLink>
+      </li>
+      <li>
         <NavLink href="/blockexplorer">
           <MagnifyingGlassIcon className="h-4 w-4" />
           Block Explorer

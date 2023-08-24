@@ -40,11 +40,11 @@ type ABI = {
   return_witnesses: ABI_ReturnWitness[];
   return_type: ABI_ReturnType;
 };
-type ACIR = number[];
+export type ACIR = string; // base64 encoded
 
 export type GenericCircuitsDeclaration = {
   [name: string]: {
-    circuit: ACIR;
+    bytecode: ACIR;
     abi: ABI;
   };
 };
@@ -57,8 +57,10 @@ export type Circuits = typeof circuits;
 
 export type Circuit<TCircuitName extends CircuitName> = Circuits[TCircuitName];
 
+export type CircuitBytecode = Circuit<CircuitName>["bytecode"];
 export type CircuitAbiParameters = Circuit<CircuitName>["abi"]["parameters"];
 export type CircuitAbi = Circuit<CircuitName>["abi"];
+export type CircuitParameterWitnesses = Circuit<CircuitName>["abi"]["param_witnesses"];
 
 export enum CircuitCodeStatus {
   "FOUND",

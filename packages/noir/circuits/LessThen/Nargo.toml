@@ -1,5 +1,7 @@
 [package]
+name = "LessThen"
+type = "bin"
 authors = [""]
-compiler_version = "0.6.0"
+compiler_version = "0.9.0"
 
 [dependencies]

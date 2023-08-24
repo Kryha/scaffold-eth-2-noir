@@ -29,6 +29,20 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@aztec/bb.js@npm:^0.3.6":
+  version: 0.3.6
+  resolution: "@aztec/bb.js@npm:0.3.6"
+  dependencies:
+    comlink: ^4.4.1
+    commander: ^10.0.1
+    debug: ^4.3.4
+    idb-keyval: ^6.2.1
+  bin:
+    bb.js: dest/main.js
+  checksum: 49fff5414885025be8cefa1b52ac52265275f2a9121d389b8f6641088a5e4a9c44b25e754c5ff6616e1ccbb0ccfefec4a64a5862903d38fb3f3968a1e608532d
+  languageName: node
+  linkType: hard
+
 "@babel/code-frame@npm:^7.16.7, @babel/code-frame@npm:^7.22.5":
   version: 7.22.5
   resolution: "@babel/code-frame@npm:7.22.5"
@@ -2941,19 +2955,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@noir-lang/noir-source-resolver@npm:1.1.1":
-  version: 1.1.1
-  resolution: "@noir-lang/noir-source-resolver@npm:1.1.1"
-  checksum: 43acc4c1a720ad0837db68bfac59efe58fe2b7467a8508807857aa738e3095d088547692efba5655f3e89e6c4747307c769e582d6ef5b4d454c7787090601a82
-  languageName: node
-  linkType: hard
-
-"@noir-lang/noir_wasm@npm:0.6.0-181813":
-  version: 0.6.0-181813
-  resolution: "@noir-lang/noir_wasm@npm:0.6.0-181813"
-  peerDependencies:
-    "@noir-lang/noir-source-resolver": 1.1.2
-  checksum: c764d3c211dd4f80a08a0ee3d715934fb3f27cc60191220ec0722853b3c790569d7a9a18e90fbec0174a307963f616913fce030f5ee2a1b175a9fc09c29996dd
+"@noir-lang/acvm_js@git+https://git@github.com/noir-lang/acvm-simulator-wasm.git#b9d9ca9dfc5140839f23998d9466307215607c42":
+  version: 0.0.0-d576736
+  resolution: "@noir-lang/acvm_js@https://git@github.com/noir-lang/acvm-simulator-wasm.git#commit=b9d9ca9dfc5140839f23998d9466307215607c42"
+  checksum: 2c7f8ccd48d66533bfc7e0d13418f5d1130e0bdbd3484dd1bc62b45a61d15bb3571036cf17931eca36e57cac319bf130d01614ea7c2dc3bd50ca681d3b60e81b
   languageName: node
   linkType: hard
 
@@ -3626,9 +3631,11 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@se-2/nextjs@workspace:packages/nextjs"
   dependencies:
+    "@aztec/bb.js": ^0.3.6
     "@ethersproject/networks": ^5.7.1
     "@ethersproject/web": ^5.7.1
     "@heroicons/react": ^2.0.11
+    "@noir-lang/acvm_js": "git+https://git@github.com/noir-lang/acvm-simulator-wasm.git#b9d9ca9dfc5140839f23998d9466307215607c42"
     "@rainbow-me/rainbowkit": ^0.12.15
     "@trivago/prettier-plugin-sort-imports": ^4.1.1
     "@types/node": ^17.0.35
@@ -3645,6 +3652,7 @@ __metadata:
     eslint-config-prettier: ^8.5.0
     eslint-plugin-prettier: ^4.2.1
     ethers: ^5.0.0
+    fflate: ^0.8.0
     next: ^13.1.6
     nextjs-progressbar: ^0.0.16
     postcss: ^8.4.16
@@ -3671,8 +3679,6 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@se-2/noir@workspace:packages/noir"
   dependencies:
-    "@noir-lang/noir-source-resolver": 1.1.1
-    "@noir-lang/noir_wasm": 0.6.0-181813
     "@types/chai": ^4.3.5
     "@types/eslint": ^8
     "@types/mocha": ^9.1.1
@@ -7211,6 +7217,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"comlink@npm:^4.4.1":
+  version: 4.4.1
+  resolution: "comlink@npm:4.4.1"
+  checksum: 16d58a8f590087fc45432e31d6c138308dfd4b75b89aec0b7f7bb97ad33d810381bd2b1e608a1fb2cf05979af9cbfcdcaf1715996d5fcf77aeb013b6da3260af
+  languageName: node
+  linkType: hard
+
 "comma-separated-tokens@npm:^2.0.0":
   version: 2.0.3
   resolution: "comma-separated-tokens@npm:2.0.3"
@@ -7256,7 +7269,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"commander@npm:^10.0.0":
+"commander@npm:^10.0.0, commander@npm:^10.0.1":
   version: 10.0.1
   resolution: "commander@npm:10.0.1"
   checksum: 436901d64a818295803c1996cd856621a74f30b9f9e28a588e726b2b1670665bccd7c1a77007ebf328729f0139838a88a19265858a0fa7a8728c4656796db948
@@ -9691,6 +9704,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"fflate@npm:^0.8.0":
+  version: 0.8.0
+  resolution: "fflate@npm:0.8.0"
+  checksum: 6215f95ee01d620a41e459247a7de7e7117dd23e78ef017c26b64c26f2a880a90eedc77675918bbf816d18cc990f6505cd71be933c67cc48cc1e7ebbff1589ea
+  languageName: node
+  linkType: hard
+
 "figures@npm:^3.0.0":
   version: 3.2.0
   resolution: "figures@npm:3.2.0"
@@ -11096,6 +11116,13 @@ __metadata:
   peerDependencies:
     postcss: ^8.1.0
   checksum: 5c324d283552b1269cfc13a503aaaa172a280f914e5b81544f3803bc6f06a3b585fb79f66f7c771a2c052db7982c18bf92d001e3b47282e3abbbb4c4cc488d68
+  languageName: node
+  linkType: hard
+
+"idb-keyval@npm:^6.2.1":
+  version: 6.2.1
+  resolution: "idb-keyval@npm:6.2.1"
+  checksum: 7c0836f832096086e99258167740181132a71dd2694c8b8454a4f5ec69114ba6d70983115153306f0b6de1c8d3bad04f67eed3dff8f50c96815b9985d6d78470
   languageName: node
   linkType: hard
 
