@@ -1,41 +1,7 @@
 import type { NextPage } from "next";
 import { useBirthYearProofsStore } from "~~/services/store/birth-year-proofs";
-
-function shortenHashString(hash: string) {
-  const prefix = hash.substring(0, 2);
-  const suffix = hash.substring(hash.length - 4);
-
-  return prefix + "..." + suffix;
-}
-
-export function copyToClipboard({
-  text,
-  successCallback,
-  errorCallback,
-}: {
-  text: string;
-  successCallback?: () => void;
-  errorCallback?: () => void;
-}) {
-  if (navigator) {
-    navigator.clipboard.writeText(text).then(
-      function () {
-        if (successCallback) {
-          successCallback();
-        }
-      },
-      function () {
-        if (errorCallback) {
-          errorCallback();
-        }
-      },
-    );
-  } else {
-    if (errorCallback) {
-      errorCallback();
-    }
-  }
-}
+import { copyToClipboard } from "~~/utils/example-zk/copy-to-clipboard";
+import { shortenHashString } from "~~/utils/example-zk/short-hash-string";
 
 const SignedStats: NextPage = () => {
   const signedBirthYear = useBirthYearProofsStore(state => state.signedBirthYear);
