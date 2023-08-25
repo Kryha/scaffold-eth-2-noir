@@ -68,7 +68,7 @@ export const BirthDateSignature = ({ aliceDefaultAge }: { aliceDefaultAge: numbe
               placeholder="Birth year"
               className="input input-bordered"
               value={form.birthYear}
-              onChange={e => setForm({ ...form, birthYear: e.target.value as unknown as number })}
+              onChange={e => setForm({ ...form, birthYear: Number(e.target.value) })}
             />
           </div>
           <div className="form-control">
