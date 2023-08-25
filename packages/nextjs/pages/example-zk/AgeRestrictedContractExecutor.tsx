@@ -8,7 +8,7 @@ export const AgeRestrictedContractExecutor = () => {
 
   const { writeAsync, isLoading } = useScaffoldContractWrite({
     contractName: "BalloonVendor",
-    functionName: "redeemFreeTokens",
+    functionName: "redeemFreeToken",
     args: [proof],
     onBlockConfirmation: txnReceipt => {
       console.log("📦 Transaction blockHash", txnReceipt.blockHash);

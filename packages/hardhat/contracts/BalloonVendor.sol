@@ -15,7 +15,7 @@ contract BalloonVendor is Ownable {
 
   event BuyTokens(address buyer, uint256 amountOfETH, uint256 amountOfTokens);
   event SellTokens(address seller, uint256 amountOfTokens, uint256 amountOfETH);
-  event FreeTokens(address FreeLoader, uint256 amountOfTokens);
+  event FreeToken(address FreeLoader, uint256 amountOfTokens);
 
   BalloonToken public balloonToken;
   UltraVerifier public ageVerifier;
@@ -59,10 +59,10 @@ contract BalloonVendor is Ownable {
     emit BuyTokens(msg.sender, msg.value, amountOfTokens);
   }
 
-  function redeemFreeTokens(bytes calldata proof) public onlyKids(proof) {
+  function redeemFreeToken(bytes calldata proof) public onlyKids(proof) {
     // TODO: only allow once per address
     balloonToken.transfer(msg.sender, 1);
-    emit FreeTokens(msg.sender, 1);
+    emit FreeToken(msg.sender, 1);
   }
 
   function withdraw() public onlyOwner {

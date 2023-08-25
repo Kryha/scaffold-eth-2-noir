@@ -344,7 +344,7 @@ const contracts = {
                   type: "uint256",
                 },
               ],
-              name: "FreeTokens",
+              name: "FreeToken",
               type: "event",
             },
             {
@@ -502,7 +502,7 @@ const contracts = {
                   type: "bytes",
                 },
               ],
-              name: "redeemFreeTokens",
+              name: "redeemFreeToken",
               outputs: [],
               stateMutability: "nonpayable",
               type: "function",

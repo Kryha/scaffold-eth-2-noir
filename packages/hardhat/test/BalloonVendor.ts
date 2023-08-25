@@ -30,13 +30,13 @@ describe("BalloonVendor", function () {
   });
   describe("Redeeming tokens", function () {
     it("should be able to redeem for free as a kid", async function () {
-      await balloonVendor.connect(addr1).redeemFreeTokens(validProof);
+      await balloonVendor.connect(addr1).redeemFreeToken(validProof);
       expect(await balloonToken.balanceOf(addr1.address)).to.equal(1);
     });
 
     it("should not work with invalid proof", async function () {
       try {
-        await balloonVendor.connect(addr1).redeemFreeTokens(invalidProof);
+        await balloonVendor.connect(addr1).redeemFreeToken(invalidProof);
       } catch (e: any) {
         expect(e.message).to.contain("PROOF_FAILURE");
       }
