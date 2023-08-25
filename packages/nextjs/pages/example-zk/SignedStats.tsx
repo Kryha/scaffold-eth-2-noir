@@ -1,6 +1,6 @@
+import Stat from "./Stat";
 import type { NextPage } from "next";
 import { useBirthYearProofsStore } from "~~/services/store/birth-year-proofs";
-import Stat from "./Stat";
 
 const SignedStats: NextPage = () => {
   const signedBirthYear = useBirthYearProofsStore(state => state.signedBirthYear);
