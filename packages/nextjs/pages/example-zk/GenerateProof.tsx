@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { ethers } from "ethers";
 import { AddressInput } from "~~/components/scaffold-eth/Input/AddressInput";
-import { ParsedArgs, generateProof } from "~~/hooks/noir/useProofGenerator";
+import { HexString, ParsedArgs, generateProof } from "~~/hooks/noir/useProofGenerator";
 import { useBirthYearProofsStore } from "~~/services/store/birth-year-proofs";
 
 type TForm = {
@@ -69,11 +69,12 @@ export const GenerateProof = ({ requiredBirthYear }: { requiredBirthYear: number
     const parsedForm = parseForm(form);
     try {
       const { proof } = await generateProof("LessThenSignedAge", parsedForm as ParsedArgs);
-      setProof(proof);
+      setProof(proof as HexString);
     } catch (e: any) {
       console.error(e.stack);
     }
   };
+
   return (
     <>
       <div className="card flex-shrink-0 w-full max-w-lg shadow-2xl bg-base-100">
