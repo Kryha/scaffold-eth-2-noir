@@ -1,7 +1,7 @@
+import SignedStats from "./SignedStats";
 import ZkSteps from "./ZkSteps";
 import type { NextPage } from "next";
 import { MetaHeader } from "~~/components/MetaHeader";
-import SignedStats from "./SignedStats";
 
 const ExampleZk: NextPage = () => {
   return (
