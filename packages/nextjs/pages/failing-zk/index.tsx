@@ -14,7 +14,7 @@ const ExampleUI: NextPage = () => {
   const [proof, setProof] = useState<string>("");
   const { writeAsync, isLoading } = useScaffoldContractWrite({
     contractName: "BalloonVendor",
-    functionName: "redeemFreeTokens",
+    functionName: "redeemFreeToken",
     args: [proof as `0x${string}`],
     onBlockConfirmation: txnReceipt => {
       console.log("📦 Transaction blockHash", txnReceipt.blockHash);
@@ -29,7 +29,7 @@ const ExampleUI: NextPage = () => {
     return signBirthYear({
       personEthereumAddress: "0x04cD158190d83Ef7E50d181c44AaFDb181a621b2",
       birthYear: 2014,
-      theMayorsSecretKey: "0x59c6995e998f97a5a0044966f0945389dc9e86dae88c7a8412f4603b6b78690d",
+      thirdPartyPrivateKey: "0x59c6995e998f97a5a0044966f0945389dc9e86dae88c7a8412f4603b6b78690d",
     })
       .then(result => {
         console.log(result);

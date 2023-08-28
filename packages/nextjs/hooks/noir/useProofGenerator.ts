@@ -3,7 +3,7 @@ import { NoirBrowser } from "~~/utils/noir/noirBrowser";
 
 let isGeneratingProof = false;
 
-type HexString = `0x${string}`;
+export type HexString = `0x${string}`;
 export type ParsedArgs = Record<string, HexString[]>;
 
 function formatArgs(parameterWitnesses: CircuitParameterWitnesses, parsedArgs: ParsedArgs): HexString[] {

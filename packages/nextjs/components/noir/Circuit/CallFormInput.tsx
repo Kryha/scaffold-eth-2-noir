@@ -22,18 +22,18 @@ export const CallFormInput = ({ setForm, form, stateObjectKey, param }: CallForm
     },
   };
 
-  if (param.type.kind === "string") {
-    // TODO
-  } else if (param.type.kind === "field") {
-    // TODO
-  } else if (param.type.kind === "integer") {
-    // TODO
-  } else if (param.type.kind === "array") {
-    // TODO
-  } else {
-    console.error("Unsupported param type:", param.type.kind);
-    console.log(JSON.stringify(param.type, null, 2));
-  }
+  // if (param.type.kind === "string") {
+  //   // TODO
+  // } else if (param.type.kind === "field") {
+  //   // TODO
+  // } else if (param.type.kind === "integer") {
+  //   // TODO
+  // } else if (param.type.kind === "array") {
+  //   // TODO
+  // } else {
+  //   console.error("Unsupported param type:", param.type.kind);
+  //   console.log(JSON.stringify(param.type, null, 2));
+  // }
 
   return <InputBase {...inputProps} />;
 };
