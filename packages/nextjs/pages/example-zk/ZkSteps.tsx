@@ -1,8 +1,8 @@
 import { Dispatch, SetStateAction, useState } from "react";
 import { AgeRestrictedContractExecutor } from "./AgeRestrictedContractExecutor";
 import { BirthDateSignature } from "./BirthDateSignature";
-import { FlavourText } from "./FlavourText";
 import { GenerateProof } from "./GenerateProof";
+import { ZkStepsIntro } from "./ZkStepsIntro";
 import type { NextPage } from "next";
 
 const TEN_YEARS = 1000 * 60 * 60 * 24 * 365 * 10;
@@ -13,21 +13,7 @@ const LAST_STEP = 4;
 export function renderZkSteps(currentStep: number, setCurrentStep: Dispatch<SetStateAction<number>>) {
   switch (currentStep) {
     case 1:
-      return (
-        <div className="hero bg-base-200">
-          <div className="hero-content text-center">
-            <div className="max-w-md">
-              <FlavourText yearTenYearsAgo={YEAR_TEN_YEARS_AGO} />
-              <button
-                className="btn btn-primary mt-6"
-                onClick={() => setCurrentStep((currentStep2: number) => currentStep2 + 1)}
-              >
-                Get Started
-              </button>
-            </div>
-          </div>
-        </div>
-      );
+      return <ZkStepsIntro setCurrentStep={setCurrentStep} yearTenYearsAgo={YEAR_TEN_YEARS_AGO} />;
     case 2:
       return <BirthDateSignature aliceDefaultAge={YEAR_TEN_YEARS_AGO + 1} />;
     case 3:
