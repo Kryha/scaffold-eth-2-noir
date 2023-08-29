@@ -1,4 +1,5 @@
 import { useState } from "react";
+import SignedStats from "./SignedStats";
 import { ethers } from "ethers";
 import secp256k1 from "secp256k1";
 import { AddressInput } from "~~/components/scaffold-eth/Input/AddressInput";
@@ -80,6 +81,7 @@ export const BirthDateSignature = ({ aliceDefaultAge }: { aliceDefaultAge: numbe
         </p>
       </div>
       <div className="card flex-shrink-0 w-full max-w-lg shadow-2xl bg-base-100">
+        <SignedStats />
         <div className="card-body">
           <div className="form-control">
             <label className="label">

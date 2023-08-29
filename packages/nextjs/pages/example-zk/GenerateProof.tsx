@@ -1,4 +1,5 @@
 import { useState } from "react";
+import SignedStats from "./SignedStats";
 import { ethers } from "ethers";
 import { AddressInput } from "~~/components/scaffold-eth/Input/AddressInput";
 import { ParsedArgs, generateProof } from "~~/hooks/noir/useProofGenerator";
@@ -100,6 +101,7 @@ export const GenerateProof = ({ requiredBirthYear }: { requiredBirthYear: number
         </p>
       </div>
       <div className="card flex-shrink-0 w-full max-w-lg shadow-2xl bg-base-100">
+        <SignedStats />
         <div className="card-body">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-8">
             <div className="form-control">

@@ -1,3 +1,4 @@
+import SignedStats from "./SignedStats";
 import { useScaffoldContractWrite } from "~~/hooks/scaffold-eth";
 import { useBirthYearProofsStore } from "~~/services/store/birth-year-proofs";
 
@@ -26,6 +27,7 @@ export const AgeRestrictedContractExecutor = () => {
         <p>Now Alice gets a balloon🎈 _token_, that she can redeem at the store to get an actual ballloon.</p>
       </div>
       <div className="card flex-shrink-0 w-full max-w-lg shadow-2xl bg-base-100">
+        <SignedStats />
         <div className="card-body">
           <div className="form-control">
             <label className="label">
