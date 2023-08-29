@@ -1,3 +1,4 @@
+import { CodeText } from "./CodeText";
 import SignedStats from "./SignedStats";
 import { useScaffoldContractWrite } from "~~/hooks/scaffold-eth";
 import { useBirthYearProofsStore } from "~~/services/store/birth-year-proofs";
@@ -18,20 +19,27 @@ export const AgeRestrictedContractExecutor = () => {
     <>
       <div className="flex-shrink-0 w-full max-w-5xl px-6 pb-6">
         <p>
-          The ballon store is using the same `TokenVendor.sol` as the [speed run Ethereum
-          challange](https://speedrunethereum.com/challenge/token-vendor), with some additions. They&apos;ve added a
-          function `redeemFreeToken`, with the `onlyKids`-modifier. The modifier constructs the public inputs and calls
-          the proof-verifier (`packages/hardhat/contracts/verifiers/LessThenSignedAge.sol`). The public inputs is part
-          of the information that was used to generate the proof. They are needed to show what we are actually proving.
+          The ballon store is using the same <CodeText text="TokenVendor.sol" /> as the{" "}
+          <a className="link" href="https://speedrunethereum.com/challenge/token-vendor">
+            Speedrun Ethereum challange
+          </a>
+          , with some additions. They&apos;ve added a function <CodeText text="redeemFreeToken" />, with the{" "}
+          <CodeText text="onlyKids" />
+          -modifier. The modifier constructs the public inputs and calls the proof-verifier (
+          <CodeText text="packages/hardhat/contracts/verifiers/LessThenSignedAge.sol" />
+          ). The public inputs is part of the information that was used to generate the proof. They are needed to show
+          what we are actually proving.
         </p>
-        <p>Now Alice gets a balloon🎈 _token_, that she can redeem at the store to get an actual ballloon.</p>
+        <p>
+          Now Alice gets a balloon🎈 <strong>token</strong>, that she can redeem at the store to get an actual ballloon.
+        </p>
       </div>
       <div className="card flex-shrink-0 w-full max-w-lg shadow-2xl bg-base-100">
         <SignedStats />
         <div className="card-body">
           <div className="form-control">
             <label className="label">
-              <span className="label-text">Your proof of having the required birth year</span>
+              <span className="label-text">Your proof of having the required birth year ✅</span>
             </label>
             <input
               type="text"

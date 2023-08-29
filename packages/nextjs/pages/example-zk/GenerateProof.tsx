@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { CodeText } from "./CodeText";
 import SignedStats from "./SignedStats";
 import { ethers } from "ethers";
 import { AddressInput } from "~~/components/scaffold-eth/Input/AddressInput";
@@ -94,10 +95,21 @@ export const GenerateProof = ({ requiredBirthYear }: { requiredBirthYear: number
           proof✅ herself locally. This is actually what we are doing in this implementation.
         </p>
         <p>
-          TTODOTODOTODOTODOTODOTODOTODOTODOTODOODO! In `packages/nextjs/utils/noir/noirBrowser.ts` you can see that we
-          are importing from `@aztec/bb.js` and `@noir-lang/acvm_js`, but we could also generate this proof with `nargo
-          prove`. We are also using the predefined circuit-ABI byte code from `packages/nextjs/generated/circuits.json`,
-          but we could re-compile it using `nargo compile`.
+          TTODOTODOTODOTODOTODO - are these paths correct? - TODOTODOTODOTODOODO! In{" "}
+          <CodeText text="packages/nextjs/utils/noir/noirBrowser.ts" /> you can see that we are importing from{" "}
+          <CodeText text="aztec/bb.js" /> and <CodeText text="noir-lang/acvm_js" />, but we could also generate this
+          proof with{" "}
+          <CodeText
+            text="nargo
+          prove"
+          />
+          . We are also using the predefined circuit-ABI byte code from{" "}
+          <CodeText text="packages/nextjs/generated/circuits.json" />, but we could re-compile it using{" "}
+          <CodeText text="nargo compile" />.
+        </p>
+        <p>
+          *Note that the &quot;signed age&quot; and &quot;ethereum address&quot;, must be the same as the ones you used
+          to generate the signed message.
         </p>
       </div>
       <div className="card flex-shrink-0 w-full max-w-lg shadow-2xl bg-base-100">
@@ -106,11 +118,11 @@ export const GenerateProof = ({ requiredBirthYear }: { requiredBirthYear: number
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-8">
             <div className="form-control">
               <label className="label">
-                <span className="label-text">Enter your birth year</span>
+                <span className="label-text">*Signed birth year</span>
               </label>
               <input
                 type="number"
-                placeholder="Birth year"
+                placeholder="Signed birth year"
                 className="input input-bordered"
                 value={form.birthYear}
                 onChange={e => setForm({ ...form, birthYear: e.target.value as unknown as number })}
@@ -118,7 +130,7 @@ export const GenerateProof = ({ requiredBirthYear }: { requiredBirthYear: number
             </div>
             <div className="form-control">
               <label className="label">
-                <span className="label-text">Enter your required birth year</span>
+                <span className="label-text">Required birth year</span>
               </label>
               <input
                 type="number"
@@ -132,11 +144,11 @@ export const GenerateProof = ({ requiredBirthYear }: { requiredBirthYear: number
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-8">
             <div className="form-control">
               <label className="label">
-                <span className="label-text">Super secret key for signing</span>
+                <span className="label-text">Birth year signature 📜</span>
               </label>
               <input
                 type="text"
-                placeholder="Proof of birth year signed"
+                placeholder="Birth year signature"
                 className="input input-bordered"
                 value={form.proofOfBirthYearSignedMessage}
                 onChange={e => setForm({ ...form, proofOfBirthYearSignedMessage: e.target.value })}
@@ -144,11 +156,11 @@ export const GenerateProof = ({ requiredBirthYear }: { requiredBirthYear: number
             </div>
             <div className="form-control">
               <label className="label">
-                <span className="label-text">Proof public key</span>
+                <span className="label-text">Public key of signer 🏛</span>
               </label>
               <input
                 type="text"
-                placeholder="proof-of-birth-year-public-key"
+                placeholder="Public key of signer"
                 className="input input-bordered"
                 value={form.proofOfBirthYearPublicKey}
                 onChange={e => setForm({ ...form, proofOfBirthYearPublicKey: e.target.value })}
@@ -157,12 +169,12 @@ export const GenerateProof = ({ requiredBirthYear }: { requiredBirthYear: number
           </div>
           <div className="form-control">
             <label className="label">
-              <span className="label-text">Ethereum address of person in signed message</span>
+              <span className="label-text">*Ethereum address signature</span>
             </label>
             <AddressInput
               value={form.personEthereumAddress}
               name="personEthereumAddress"
-              placeholder="Ethereum address of person in signed message"
+              placeholder="Ethereum address in signature"
               onChange={(val: string) => setForm({ ...form, personEthereumAddress: val })}
             />
           </div>
