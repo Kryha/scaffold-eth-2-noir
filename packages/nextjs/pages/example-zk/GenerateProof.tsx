@@ -74,7 +74,7 @@ export const GenerateProof = ({ requiredBirthYear }: { requiredBirthYear: number
     const notifcationId = notification.loading("Generating proof...");
     try {
       const parsedForm = parseForm(form);
-      const { proof } = await generateProof("LessThenSignedAge", parsedForm as ParsedArgs);
+      const { proof } = await generateProof("LessThanSignedAge", parsedForm as ParsedArgs);
       setProof(`0x${proof}`);
       notification.success("Proof generated");
     } catch (e: any) {

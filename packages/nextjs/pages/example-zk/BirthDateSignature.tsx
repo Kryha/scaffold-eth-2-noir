@@ -66,7 +66,7 @@ export const BirthDateSignature = ({ aliceDefaultAge }: { aliceDefaultAge: numbe
           same format as the Town Hall for constructing the claim that is being signed📜.
           TTODOTODOTODOTODOTODOTODOTODOTODOTODOODO! In this project the claim construction can be found in{" "}
           <CodeText text="packages/nextjs/pages/example-zk/BirthDateSignature.tsx" /> (<CodeText text="signBirthYear" />
-          ) and <CodeText text="packages/noir/circuits/LessThenSignedAge/src/main.nr" /> (
+          ) and <CodeText text="packages/noir/circuits/LessThanSignedAge/src/main.nr" /> (
           <CodeText text="construct_claim_payload" />
           ).
         </p>

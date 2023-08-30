@@ -3,7 +3,7 @@ pragma solidity >=0.8.4;
 
 import "@openzeppelin/contracts/access/Ownable.sol";
 import "./BalloonToken.sol";
-import "./verifiers/LessThenSignedAge.sol";
+import "./verifiers/LessThanSignedAge.sol";
 
 contract BalloonVendor is Ownable {
 

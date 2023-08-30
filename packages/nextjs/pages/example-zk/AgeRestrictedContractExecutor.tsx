@@ -26,7 +26,7 @@ export const AgeRestrictedContractExecutor = () => {
           , with some additions. They&apos;ve added a function <CodeText text="redeemFreeToken" />, with the{" "}
           <CodeText text="onlyKids" />
           -modifier. The modifier constructs the public inputs and calls the proof-verifier (
-          <CodeText text="packages/hardhat/contracts/verifiers/LessThenSignedAge.sol" />
+          <CodeText text="packages/hardhat/contracts/verifiers/LessThanSignedAge.sol" />
           ). The public inputs is part of the information that was used to generate the proof. They are needed to show
           what we are actually proving.
         </p>

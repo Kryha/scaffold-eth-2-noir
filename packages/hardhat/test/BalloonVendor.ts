@@ -12,11 +12,11 @@ describe("BalloonVendor", function () {
     addr1 = signers[1];
     const balloonVendorFactory = await ethers.getContractFactory("BalloonVendor");
     const balloonTokenFactory = await ethers.getContractFactory("BalloonToken");
-    const lessThenSignedAgeFactory = await ethers.getContractFactory(
-      "contracts/verifiers/LessThenSignedAge.sol:UltraVerifier",
+    const lessThanSignedAgeFactory = await ethers.getContractFactory(
+      "contracts/verifiers/LessThanSignedAge.sol:UltraVerifier",
     );
     balloonToken = (await balloonTokenFactory.deploy()) as BalloonToken;
-    const verifer = await lessThenSignedAgeFactory.deploy();
+    const verifer = await lessThanSignedAgeFactory.deploy();
     balloonVendor = (await balloonVendorFactory.deploy(balloonToken.address, verifer.address)) as BalloonVendor;
     await balloonVendor.deployed();
     await balloonToken.transfer(balloonVendor.address, ethers.utils.parseEther("1000"));

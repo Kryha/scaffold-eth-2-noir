@@ -15,10 +15,10 @@ function transformPublicInputs(publicInputs: typeof validPublicInputs): string[]
   return publicInputsArray;
 }
 
-describe("LessThenSignedAge", function () {
+describe("LessThanSignedAge", function () {
   let verifier: UltraVerifier;
   before(async () => {
-    const verifierFactory = await ethers.getContractFactory("contracts/verifiers/LessThenSignedAge.sol:UltraVerifier");
+    const verifierFactory = await ethers.getContractFactory("contracts/verifiers/LessThanSignedAge.sol:UltraVerifier");
     verifier = (await verifierFactory.deploy()) as UltraVerifier;
     await verifier.deployed();
   });

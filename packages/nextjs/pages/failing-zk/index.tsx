@@ -41,7 +41,7 @@ const ExampleUI: NextPage = () => {
           proofOfBirthYearPublicKey: result.signerPublicKey,
           personEthereumAddress: "0x04cD158190d83Ef7E50d181c44AaFDb181a621b2",
         });
-        return generateProof("LessThenSignedAge", parsedForm as ParsedArgs);
+        return generateProof("LessThanSignedAge", parsedForm as ParsedArgs);
       })
       .then(result => {
         setProof(result.proof);

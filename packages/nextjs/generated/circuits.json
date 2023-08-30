@@ -1,5 +1,5 @@
 {
-  "LessThen": {
+  "LessThan": {
     "backend": "acvm-backend-barretenberg",
     "abi": {
       "parameters": [
@@ -33,7 +33,7 @@
     "proving_key": null,
     "verification_key": null
   },
-  "LessThenSignedAge": {
+  "LessThanSignedAge": {
     "backend": "acvm-backend-barretenberg",
     "abi": {
       "parameters": [

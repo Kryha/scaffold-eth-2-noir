@@ -6,7 +6,7 @@ const deployVerifiers: DeployFunction = async function (hre: HardhatRuntimeEnvir
   const { deployer } = await hre.getNamedAccounts();
   const { deploy } = hre.deployments;
 
-  const verifierContract = await hre.ethers.getContract("VerifierLessThenSignedAge", deployer);
+  const verifierContract = await hre.ethers.getContract("VerifierLessThanSignedAge", deployer);
   const balloonTokenContract = await hre.ethers.getContract("BalloonToken", deployer);
 
   const balloonVendor = await deploy("BalloonVendor", {
