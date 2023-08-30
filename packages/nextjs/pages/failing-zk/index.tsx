@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { signBirthYear } from "../example-zk/BirthDateSignature";
 import { parseForm } from "../example-zk/GenerateProof";
-import { BigNumber } from "ethers";
 import type { NextPage } from "next";
 import { ParsedArgs, generateProof } from "~~/hooks/noir/useProofGenerator";
 import { useScaffoldContractWrite } from "~~/hooks/scaffold-eth";
@@ -18,10 +17,6 @@ const ExampleUI: NextPage = () => {
     args: [proof as `0x${string}`],
     onBlockConfirmation: txnReceipt => {
       console.log("📦 Transaction blockHash", txnReceipt.blockHash);
-    },
-    overrides: {
-      // TODO: is this needed?
-      gasLimit: BigNumber.from("10000000"),
     },
   });
 
