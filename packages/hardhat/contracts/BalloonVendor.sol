@@ -10,8 +10,8 @@ contract BalloonVendor is Ownable {
   uint256 public tokensPerEth = 100;
   uint16 public earliestBirthYear = 2013;
   // TODO: better solution for "trusted authorities"
-  bytes32 public mayorsPublicKeyX = hex"ba5734d8f7091719471e7f7ed6b9df170dc70cc661ca05e688601ad984f068b0";
-  bytes32 public mayorsPublicKeyY = hex"d67351e5f06073092499336ab0839ef8a521afd334e53807205fa2f08eec74f4";
+  bytes32 public thirdPartyPublicKeyX = hex"ba5734d8f7091719471e7f7ed6b9df170dc70cc661ca05e688601ad984f068b0";
+  bytes32 public thirdPartyPublicKeyY = hex"d67351e5f06073092499336ab0839ef8a521afd334e53807205fa2f08eec74f4";
 
   event BuyTokens(address buyer, uint256 amountOfETH, uint256 amountOfTokens);
   event SellTokens(address seller, uint256 amountOfTokens, uint256 amountOfETH);
@@ -41,8 +41,8 @@ contract BalloonVendor is Ownable {
   modifier onlyKids(bytes calldata proof) {
     bytes32[] memory publicInputs = new bytes32[](85);
     publicInputs[0] = bytes32(uint256(earliestBirthYear));
-    publicInputs = preparePublicInputs(publicInputs, mayorsPublicKeyX, 1, 32);
-    publicInputs = preparePublicInputs(publicInputs, mayorsPublicKeyY, 33, 32);
+    publicInputs = preparePublicInputs(publicInputs, thirdPartyPublicKeyX, 1, 32);
+    publicInputs = preparePublicInputs(publicInputs, thirdPartyPublicKeyY, 33, 32);
     publicInputs = preparePublicInputs(publicInputs, bytes32(uint256(uint160(msg.sender))), 65, 20);
     require(ageVerifier.verify(proof, publicInputs));
     _;

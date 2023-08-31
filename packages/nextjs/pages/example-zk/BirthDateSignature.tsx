@@ -63,12 +63,11 @@ export const BirthDateSignature = ({ aliceDefaultAge }: { aliceDefaultAge: numbe
         </p>
         <p>
           When the balloon store implemented their zero knowledge proof solution they made sure that they are using the
-          same format as the Town Hall for constructing the claim that is being signed📜.
-          TTODOTODOTODOTODOTODOTODOTODOTODOTODOODO! In this project the claim construction can be found in{" "}
-          <CodeText text="packages/nextjs/pages/example-zk/BirthDateSignature.tsx" /> (<CodeText text="signBirthYear" />
-          ) and <CodeText text="packages/noir/circuits/LessThanSignedAge/src/main.nr" /> (
-          <CodeText text="construct_claim_payload" />
-          ).
+          same format as the Town Hall for constructing the claim that is being signed📜. In this project the claim
+          construction can be found in <CodeText text="packages/nextjs/pages/example-zk/BirthDateSignature.tsx" /> (
+          <CodeText text="signBirthYear" />
+          ) in the FrontEnd and <CodeText text="packages/noir/circuits/LessThanSignedAge/src/main.nr" /> (
+          <CodeText text="construct_claim_payload" />) when implemented as a Noir circuit.
         </p>
         <p>
           What the Town Hall actually signs is that they confirm that Alice is born on a certain year AND that she has
