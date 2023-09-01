@@ -93,10 +93,11 @@ export const GenerateProof = ({ requiredBirthYear }: { requiredBirthYear: number
   return (
     <>
       <div className="flex-shrink-0 w-full max-w-5xl px-6 pb-6">
+        <h1 className="text-3xl font-bold">Step 2: Generating the proof ✅</h1>
         <p>
           One of the reasons that Alice knows that she is not sharing her birth year with anyone is that the proof
           generation is open source, and she herself can double check the code. Furthermore she can even generate the
-          proof✅ herself locally. This is actually what we are doing in this implementation.
+          proof herself locally. This is actually what we are doing in this implementation.
         </p>
         <p>
           The proof is generated in the browser in the file{" "}
