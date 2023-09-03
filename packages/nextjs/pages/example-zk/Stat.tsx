@@ -20,7 +20,7 @@ const Stat = (props: StatProps) => {
         </CopyToClipboard>
       </div>
       <div className="stat-title">{props.title}</div>
-      <div className="stat-value">{shortenHashString(props.stat)}</div>
+      <div className="stat-value text-base">{shortenHashString(props.stat)}</div>
       <div className="stat-desc">{props.description}</div>
     </div>
   );
