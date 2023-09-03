@@ -7,11 +7,10 @@ export const ZkStepsIntro = ({ setCurrentStep, yearTenYearsAgo }: ZkStepsIntroPr
   return (
     <div className="hero bg-base-200">
       <div className="hero-content text-center">
-        <div className="max-w-5xl">
+        <div className="max-w-3xl">
           <div className="flex flex-col justify-center items-center">
             <h1 className="text-5xl font-bold">Hello there</h1>
             <p className="py-6">
-              {" "}
               Alice has heard that balloon store in town is handing out balloons🎈 to anyone who is 10 years old or
               younger. However, Alice does not want to share her age with anyone. Lucky for her, the balloon store has a
               zero knowledge proof solution. This means she can claim her balloon🎈 and only share as little information
