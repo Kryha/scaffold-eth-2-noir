@@ -91,8 +91,8 @@ export const GenerateProof = ({ requiredBirthYear }: { requiredBirthYear: number
   };
 
   return (
-    <>
-      <div className="flex-shrink-0 w-full max-w-5xl px-6 pb-6">
+    <div className="grid grid-cols-2 gap-6 max-w-7xl">
+      <div>
         <p>
           One of the reasons that Alice knows that she is not sharing her birth year with anyone is that the proof
           generation is open source, and she herself can double check the code. Furthermore she can even generate the
@@ -112,79 +112,81 @@ export const GenerateProof = ({ requiredBirthYear }: { requiredBirthYear: number
           to generate the signed message.
         </p>
       </div>
-      <div className="card flex-shrink-0 w-full max-w-lg shadow-2xl bg-base-100">
-        <SignedStats />
-        <div className="card-body">
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-8">
-            <div className="form-control">
-              <label className="label">
-                <span className="label-text">*Signed birth year</span>
-              </label>
-              <input
-                type="number"
-                placeholder="Signed birth year"
-                className="input input-bordered"
-                value={birthYear}
-                onChange={e => setBirthYear(e.target.value)}
-              />
+      <div>
+        <div className="card w-full shadow-2xl bg-base-100">
+          <SignedStats />
+          <div className="card-body">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-8">
+              <div className="form-control">
+                <label className="label">
+                  <span className="label-text">*Signed birth year</span>
+                </label>
+                <input
+                  type="number"
+                  placeholder="Signed birth year"
+                  className="input input-bordered"
+                  value={birthYear}
+                  onChange={e => setBirthYear(e.target.value)}
+                />
+              </div>
+              <div className="form-control">
+                <label className="label">
+                  <span className="label-text">Required birth year</span>
+                </label>
+                <input
+                  type="number"
+                  placeholder="Required birth year"
+                  className="input input-bordered"
+                  value={form.requiredBirthYear}
+                  onChange={e => setForm({ ...form, requiredBirthYear: Number(e.target.value) })}
+                />
+              </div>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-8">
+              <div className="form-control">
+                <label className="label">
+                  <span className="label-text">Birth year signature 📜</span>
+                </label>
+                <input
+                  type="text"
+                  placeholder="Birth year signature"
+                  className="input input-bordered"
+                  value={form.proofOfBirthYearSignedMessage}
+                  onChange={e => setForm({ ...form, proofOfBirthYearSignedMessage: e.target.value })}
+                />
+              </div>
+              <div className="form-control">
+                <label className="label">
+                  <span className="label-text">Public key of signer 🏛</span>
+                </label>
+                <input
+                  type="text"
+                  placeholder="Public key of signer"
+                  className="input input-bordered"
+                  value={form.proofOfBirthYearPublicKey}
+                  onChange={e => setForm({ ...form, proofOfBirthYearPublicKey: e.target.value })}
+                />
+              </div>
             </div>
             <div className="form-control">
               <label className="label">
-                <span className="label-text">Required birth year</span>
+                <span className="label-text">*Ethereum address signature</span>
               </label>
-              <input
-                type="number"
-                placeholder="Required birth year"
-                className="input input-bordered"
-                value={form.requiredBirthYear}
-                onChange={e => setForm({ ...form, requiredBirthYear: Number(e.target.value) })}
+              <AddressInput
+                value={ethereumAddress}
+                name="personEthereumAddress"
+                placeholder="Ethereum address in signature"
+                onChange={(value: string) => setEthereumAddress(value)}
               />
             </div>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-8">
-            <div className="form-control">
-              <label className="label">
-                <span className="label-text">Birth year signature 📜</span>
-              </label>
-              <input
-                type="text"
-                placeholder="Birth year signature"
-                className="input input-bordered"
-                value={form.proofOfBirthYearSignedMessage}
-                onChange={e => setForm({ ...form, proofOfBirthYearSignedMessage: e.target.value })}
-              />
+            <div className="form-control mt-6">
+              <button className="btn btn-primary" onClick={handleSubmission} disabled={isProofRunning}>
+                Generate proof ✅
+              </button>
             </div>
-            <div className="form-control">
-              <label className="label">
-                <span className="label-text">Public key of signer 🏛</span>
-              </label>
-              <input
-                type="text"
-                placeholder="Public key of signer"
-                className="input input-bordered"
-                value={form.proofOfBirthYearPublicKey}
-                onChange={e => setForm({ ...form, proofOfBirthYearPublicKey: e.target.value })}
-              />
-            </div>
-          </div>
-          <div className="form-control">
-            <label className="label">
-              <span className="label-text">*Ethereum address signature</span>
-            </label>
-            <AddressInput
-              value={ethereumAddress}
-              name="personEthereumAddress"
-              placeholder="Ethereum address in signature"
-              onChange={(value: string) => setEthereumAddress(value)}
-            />
-          </div>
-          <div className="form-control mt-6">
-            <button className="btn btn-primary" onClick={handleSubmission} disabled={isProofRunning}>
-              Generate proof ✅
-            </button>
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };

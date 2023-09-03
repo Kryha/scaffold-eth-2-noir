@@ -61,8 +61,8 @@ export const BirthDateSignature = ({ aliceDefaultAge }: { aliceDefaultAge: numbe
   };
 
   return (
-    <>
-      <div className="flex-shrink-0 w-full max-w-5xl px-6 pb-6">
+    <div className="grid grid-cols-2 gap-6 max-w-7xl">
+      <div>
         <p>
           Alice recognizes that, in order for her to not having to share her age with the balloon store, she at least
           has to share her age with a third party that the balloon store also can trust. In this case, the balloon store
@@ -84,51 +84,53 @@ export const BirthDateSignature = ({ aliceDefaultAge }: { aliceDefaultAge: numbe
           This can be improved in many ways, but at a minium it should be provided to the UI by a Town Hall employee.
         </p>
       </div>
-      <div className="card flex-shrink-0 w-full max-w-lg shadow-2xl bg-base-100">
-        <SignedStats />
-        <div className="card-body">
-          <div className="form-control">
-            <label className="label">
-              <span className="label-text">Enter your Ethereum address</span>
-            </label>
-            <AddressInput
-              value={ethereumAddress}
-              name="personEthereumAddress"
-              placeholder="Ethereum address"
-              onChange={(value: string) => setEthereumAddress(value)}
-            />
-          </div>
-          <div className="form-control">
-            <label className="label">
-              <span className="label-text">Enter your birth year</span>
-            </label>
-            <input
-              type="number"
-              placeholder="Birth year"
-              className="input input-bordered"
-              value={birthYear}
-              onChange={e => setBirthYear(e.target.value)}
-            />
-          </div>
-          <div className="form-control">
-            <label className="label">
-              <span className="label-text">Third party&apos;s🏛 private key for signing</span>
-            </label>
-            <input
-              type="text"
-              placeholder="Super secret key"
-              value={form.thirdPartyPrivateKey}
-              className="input input-bordered"
-              onChange={e => setForm({ ...form, thirdPartyPrivateKey: e.target.value })}
-            />
-          </div>
-          <div className="form-control">
-            <button className="btn btn-primary mt-6" onClick={handleSubmission}>
-              Sign birth year 📜
-            </button>
+      <div>
+        <div className="card w-full shadow-2xl bg-base-100">
+          <SignedStats />
+          <div className="card-body">
+            <div className="form-control">
+              <label className="label">
+                <span className="label-text">Enter your Ethereum address</span>
+              </label>
+              <AddressInput
+                value={ethereumAddress}
+                name="personEthereumAddress"
+                placeholder="Ethereum address"
+                onChange={(value: string) => setEthereumAddress(value)}
+              />
+            </div>
+            <div className="form-control">
+              <label className="label">
+                <span className="label-text">Enter your birth year</span>
+              </label>
+              <input
+                type="number"
+                placeholder="Birth year"
+                className="input input-bordered"
+                value={birthYear}
+                onChange={e => setBirthYear(e.target.value)}
+              />
+            </div>
+            <div className="form-control">
+              <label className="label">
+                <span className="label-text">Third party&apos;s🏛 private key for signing</span>
+              </label>
+              <input
+                type="text"
+                placeholder="Super secret key"
+                value={form.thirdPartyPrivateKey}
+                className="input input-bordered"
+                onChange={e => setForm({ ...form, thirdPartyPrivateKey: e.target.value })}
+              />
+            </div>
+            <div className="form-control">
+              <button className="btn btn-primary mt-6" onClick={handleSubmission}>
+                Sign birth year 📜
+              </button>
+            </div>
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
