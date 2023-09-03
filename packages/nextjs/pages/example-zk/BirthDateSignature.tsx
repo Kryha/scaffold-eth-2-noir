@@ -72,9 +72,16 @@ export const BirthDateSignature = ({ aliceDefaultAge }: { aliceDefaultAge: numbe
         <p>
           When the balloon store implemented their zero knowledge proof solution they made sure that they are using the
           same format as the Town Hall for constructing the claim that is being signed📜. In this project the claim
-          construction can be found in <CodeText text="packages/nextjs/pages/example-zk/BirthDateSignature.tsx" /> (
-          <CodeText text="signBirthYear" />
-          ) in the FrontEnd and <CodeText text="packages/noir/circuits/LessThanSignedAge/src/main.nr" /> (
+          construction can be found in{" "}
+          <a href="https://github.com/Kryha/scaffold-eth-2-noir/blob/main/packages/nextjs/pages/example-zk/BirthDateSignature.tsx">
+            <CodeText text="packages/nextjs/pages/example-zk/BirthDateSignature.tsx" />
+          </a>{" "}
+          (
+          <CodeText text="signBirthYear" />) in the FrontEnd and{" "}
+          <a href="https://github.com/Kryha/scaffold-eth-2-noir/blob/main/packages/noir/circuits/LessThanSignedAge/src/main.nr">
+            <CodeText text="packages/noir/circuits/LessThanSignedAge/src/main.nr" />
+          </a>{" "}
+          (
           <CodeText text="construct_claim_payload" />) when implemented as a Noir circuit.
         </p>
         <p>
