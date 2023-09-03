@@ -2,6 +2,7 @@ import { Dispatch, SetStateAction, useState } from "react";
 import { AgeRestrictedContractExecutor } from "./AgeRestrictedContractExecutor";
 import { BirthDateSignature } from "./BirthDateSignature";
 import { GenerateProof } from "./GenerateProof";
+import SignedStats from "./SignedStats";
 import { ZkStepsIntro } from "./ZkStepsIntro";
 import type { NextPage } from "next";
 
@@ -30,6 +31,7 @@ const ZkSteps: NextPage = () => {
 
   return (
     <>
+      <SignedStats />
       {renderZkSteps(currentStep, setCurrentStep)}
       <div className="join grid grid-cols-2 mt-8 gap-8">
         {currentStep !== FIRST_STEP && (

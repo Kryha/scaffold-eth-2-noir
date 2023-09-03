@@ -1,5 +1,4 @@
 import { CodeText } from "./CodeText";
-import SignedStats from "./SignedStats";
 import { useScaffoldContractWrite } from "~~/hooks/scaffold-eth";
 import { useBirthYearProofsStore } from "~~/services/store/birth-year-proofs";
 
@@ -36,7 +35,6 @@ export const AgeRestrictedContractExecutor = () => {
       </div>
       <div>
         <div className="card w-full shadow-2xl bg-base-100">
-          <SignedStats />
           <div className="card-body">
             <div className="form-control">
               <label className="label">
