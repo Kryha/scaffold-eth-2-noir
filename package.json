@@ -13,7 +13,7 @@
     "account": "yarn workspace @se-2/hardhat account",
     "chain": "yarn workspace @se-2/hardhat chain",
     "fork": "yarn workspace @se-2/hardhat fork",
-    "deploy": "yarn noir:export && yarn workspace @se-2/hardhat deploy",
+    "deploy": "yarn noir:export; yarn workspace @se-2/hardhat deploy",
     "verify": "yarn workspace @se-2/hardhat verify",
     "compile": "yarn workspace @se-2/hardhat compile",
     "generate": "yarn workspace @se-2/hardhat generate",
