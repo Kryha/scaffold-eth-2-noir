@@ -21,7 +21,7 @@ const getInitialFormState = (aliceDefaultAge: number): TForm => ({
   thirdPartyPrivateKey: THIRD_PARTY_PRIVATE_KEY,
 });
 
-// This function is called when generating the signature from the FE
+// This function is called when the TPP 🏛 generates the signature 📜
 export const signBirthYear = async (form: TForm) => {
   const { personEthereumAddress, birthYear, thirdPartyPrivateKey } = form;
   const claimHash = ethers.utils.solidityKeccak256(["address", "uint16"], [personEthereumAddress, birthYear]);

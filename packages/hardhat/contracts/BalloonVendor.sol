@@ -59,6 +59,7 @@ contract BalloonVendor is Ownable {
     emit BuyTokens(msg.sender, msg.value, amountOfTokens);
   }
 
+  // This function redeems the actual balloon 🎈 NFT
   function redeemFreeToken(bytes calldata proof) public onlyKids(proof) {
     // TODO: only allow once per address
     balloonToken.transfer(msg.sender, 1);

@@ -26,7 +26,13 @@ export const AgeRestrictedContractExecutor = () => {
           </a>
           , with some additions. They&apos;ve added a function <CodeText text="redeemFreeToken" />, with the{" "}
           <CodeText text="onlyKids" />
-          -modifier. The modifier constructs the public inputs and calls the proof-verifier in (
+          -modifier. This implementation can be found in{" "}
+          <a href="https://github.com/Kryha/scaffold-eth-2-noir/blob/main/packages/hardhat/contracts/BalloonVendor.sol">
+            <CodeText text="packages/hardhat/contracts/BalloonVendor.sol" />
+          </a>{" "}
+          in our project.
+          <br />
+          The modifier constructs the public inputs and calls the proof-verifier in (
           <a href="https://github.com/Kryha/scaffold-eth-2-noir/blob/main/packages/hardhat/contracts/verifiers/LessThanSignedAge.sol">
             <CodeText text="packages/hardhat/contracts/verifiers/LessThanSignedAge.sol" />
           </a>

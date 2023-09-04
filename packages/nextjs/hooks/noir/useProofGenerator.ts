@@ -37,7 +37,7 @@ function getPublicInputsLength(parameters: CircuitAbiParameters) {
     }, 0);
 }
 
-// This function generates the proof
+// This function generates the proof ✅
 export const generateProof = async (circuitName: CircuitName, parsedArgs: ParsedArgs) => {
   isGeneratingProof = true;
   const noir = new NoirBrowser();
