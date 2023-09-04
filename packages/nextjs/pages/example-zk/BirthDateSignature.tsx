@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { CodeText } from "./CodeText";
-import SignedStats from "./SignedStats";
 import { ethers } from "ethers";
 import secp256k1 from "secp256k1";
 import { AddressInput } from "~~/components/scaffold-eth/Input/AddressInput";
@@ -61,8 +60,8 @@ export const BirthDateSignature = ({ aliceDefaultAge }: { aliceDefaultAge: numbe
   };
 
   return (
-    <>
-      <div className="flex-shrink-0 w-full max-w-5xl px-6 pb-6">
+    <div className="grid grid-cols-2 gap-6 max-w-7xl">
+      <div>
         <p>
           Alice recognizes that, in order for her to not having to share her age with the balloon store, she at least
           has to share her age with a third party that the balloon store also can trust. In this case, the balloon store
@@ -72,9 +71,16 @@ export const BirthDateSignature = ({ aliceDefaultAge }: { aliceDefaultAge: numbe
         <p>
           When the balloon store implemented their zero knowledge proof solution they made sure that they are using the
           same format as the Town Hall for constructing the claim that is being signed📜. In this project the claim
-          construction can be found in <CodeText text="packages/nextjs/pages/example-zk/BirthDateSignature.tsx" /> (
-          <CodeText text="signBirthYear" />
-          ) in the FrontEnd and <CodeText text="packages/noir/circuits/LessThanSignedAge/src/main.nr" /> (
+          construction can be found in{" "}
+          <a href="https://github.com/Kryha/scaffold-eth-2-noir/blob/main/packages/nextjs/pages/example-zk/BirthDateSignature.tsx">
+            <CodeText text="packages/nextjs/pages/example-zk/BirthDateSignature.tsx" />
+          </a>{" "}
+          (
+          <CodeText text="signBirthYear" />) in the FrontEnd and{" "}
+          <a href="https://github.com/Kryha/scaffold-eth-2-noir/blob/main/packages/noir/circuits/LessThanSignedAge/src/main.nr">
+            <CodeText text="packages/noir/circuits/LessThanSignedAge/src/main.nr" />
+          </a>{" "}
+          (
           <CodeText text="construct_claim_payload" />) when implemented as a Noir circuit.
         </p>
         <p>
@@ -84,51 +90,52 @@ export const BirthDateSignature = ({ aliceDefaultAge }: { aliceDefaultAge: numbe
           This can be improved in many ways, but at a minium it should be provided to the UI by a Town Hall employee.
         </p>
       </div>
-      <div className="card flex-shrink-0 w-full max-w-lg shadow-2xl bg-base-100">
-        <SignedStats />
-        <div className="card-body">
-          <div className="form-control">
-            <label className="label">
-              <span className="label-text">Enter your Ethereum address</span>
-            </label>
-            <AddressInput
-              value={ethereumAddress}
-              name="personEthereumAddress"
-              placeholder="Ethereum address"
-              onChange={(value: string) => setEthereumAddress(value)}
-            />
-          </div>
-          <div className="form-control">
-            <label className="label">
-              <span className="label-text">Enter your birth year</span>
-            </label>
-            <input
-              type="number"
-              placeholder="Birth year"
-              className="input input-bordered"
-              value={birthYear}
-              onChange={e => setBirthYear(e.target.value)}
-            />
-          </div>
-          <div className="form-control">
-            <label className="label">
-              <span className="label-text">Third party&apos;s🏛 private key for signing</span>
-            </label>
-            <input
-              type="text"
-              placeholder="Super secret key"
-              value={form.thirdPartyPrivateKey}
-              className="input input-bordered"
-              onChange={e => setForm({ ...form, thirdPartyPrivateKey: e.target.value })}
-            />
-          </div>
-          <div className="form-control">
-            <button className="btn btn-primary mt-6" onClick={handleSubmission}>
-              Sign birth year 📜
-            </button>
+      <div>
+        <div className="card w-full shadow-2xl bg-base-100">
+          <div className="card-body">
+            <div className="form-control">
+              <label className="label">
+                <span className="label-text">Enter your Ethereum address</span>
+              </label>
+              <AddressInput
+                value={ethereumAddress}
+                name="personEthereumAddress"
+                placeholder="Ethereum address"
+                onChange={(value: string) => setEthereumAddress(value)}
+              />
+            </div>
+            <div className="form-control">
+              <label className="label">
+                <span className="label-text">Enter your birth year</span>
+              </label>
+              <input
+                type="number"
+                placeholder="Birth year"
+                className="input input-bordered"
+                value={birthYear}
+                onChange={e => setBirthYear(e.target.value)}
+              />
+            </div>
+            <div className="form-control">
+              <label className="label">
+                <span className="label-text">Third party&apos;s🏛 private key for signing</span>
+              </label>
+              <input
+                type="text"
+                placeholder="Super secret key"
+                value={form.thirdPartyPrivateKey}
+                className="input input-bordered"
+                onChange={e => setForm({ ...form, thirdPartyPrivateKey: e.target.value })}
+              />
+            </div>
+            <div className="form-control">
+              <button className="btn btn-primary mt-6" onClick={handleSubmission}>
+                Sign birth year 📜
+              </button>
+            </div>
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
