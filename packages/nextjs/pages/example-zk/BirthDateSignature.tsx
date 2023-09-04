@@ -68,7 +68,7 @@ export const BirthDateSignature = ({ aliceDefaultAge }: { aliceDefaultAge: numbe
         <p>
           Alice recognizes that, in order for her to not have to share her age with the balloon store, she at least has
           to share her age with a trusted third party. In this case, the balloon store has selected the Town Hall to be
-          the trusted third party🏛. Alice accepts that she has to share her age with the Town Hall.
+          the trusted third party🏛. Alice accepts the fact that she has to share her age with the Town Hall.
         </p>
         <p>
           When the balloon store implemented their zero knowledge proof solution they made sure that they are using the
@@ -89,7 +89,8 @@ export const BirthDateSignature = ({ aliceDefaultAge }: { aliceDefaultAge: numbe
           What the Town Hall actually signs is that they confirm that Alice is born in a certain year AND that she has
           control over a certain Ethereum address. The check of Alice&apos;s Ethereum address is not done in this
           example. The code for producing the signature currently includes the Town Hall&apos;s hardcoded private key.
-          This can be improved in many ways, but at a minimum it should be provided to the UI by a Town Hall employee.
+          This can be improved in many ways, but at a minimum it should be the Towna Hall eployee that provides it to
+          the UI.
         </p>
       </div>
       <div>
