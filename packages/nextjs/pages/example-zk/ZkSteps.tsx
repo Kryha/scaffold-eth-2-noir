@@ -5,7 +5,6 @@ import { GenerateProof } from "./GenerateProof";
 import SignedStats from "./SignedStats";
 import { ZkStepsIntro } from "./ZkStepsIntro";
 import type { NextPage } from "next";
-import { useBirthYearProofsStore } from "~~/services/store/birth-year-proofs";
 
 const TEN_YEARS = 1000 * 60 * 60 * 24 * 365 * 10;
 const YEAR_TEN_YEARS_AGO = new Date(Date.now() - TEN_YEARS).getFullYear();
@@ -31,13 +30,7 @@ const ZkSteps: NextPage = () => {
   const [currentStep, setCurrentStep] = useState(0);
   const step2ClassName = currentStep >= 2 ? "step-primary" : "";
   const step3ClassName = currentStep >= 3 ? "step-primary" : "";
-  const signedBirthYear = useBirthYearProofsStore(state => state.signedBirthYear);
-  const signerPublicKey = useBirthYearProofsStore(state => state.signerPublicKey);
-  const proof = useBirthYearProofsStore(state => state.proof);
-  const step2NotCompleted = !signedBirthYear && !signerPublicKey && currentStep === 1;
-  const step3NotCompleted = proof === "0x" && currentStep === 2;
   const previousButtonDisabled = currentStep === INTRO_STEP;
-  const nextButtonDisabled = currentStep === LAST_STEP || step2NotCompleted || step3NotCompleted;
 
   return (
     <>
@@ -46,9 +39,9 @@ const ZkSteps: NextPage = () => {
       {currentStep !== INTRO_STEP && (
         <>
           <ul className="steps pt-12 steps-vertical md:steps-horizontal">
-            <li className="step step-primary">Sign with third party</li>
-            <li className={`step ${step2ClassName}`}>Proof of signature</li>
-            <li className={`step ${step3ClassName}`}>Receive a balloon</li>
+            <li className="step step-primary">Third party signature 🏛📜</li>
+            <li className={`step ${step2ClassName}`}>Generate proof ✅</li>
+            <li className={`step ${step3ClassName}`}>Call contract🎈</li>
           </ul>
           <div className="join grid grid-cols-2 mt-8 gap-8">
             <>
@@ -63,7 +56,6 @@ const ZkSteps: NextPage = () => {
                 <button
                   className="join-item btn btn-outline"
                   onClick={() => setCurrentStep(currentStep => currentStep + 1)}
-                  disabled={nextButtonDisabled}
                 >
                   Next
                 </button>
