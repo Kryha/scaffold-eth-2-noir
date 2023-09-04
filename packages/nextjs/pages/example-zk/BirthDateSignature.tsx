@@ -6,7 +6,7 @@ import { AddressInput } from "~~/components/scaffold-eth/Input/AddressInput";
 import { useBirthYearProofsStore } from "~~/services/store/birth-year-proofs";
 import { notification } from "~~/utils/scaffold-eth";
 
-// Hardcoded TPP private key
+// Hardcoded Trusted Third Party(TTP) private key
 const THIRD_PARTY_PRIVATE_KEY = "0x59c6995e998f97a5a0044966f0945389dc9e86dae88c7a8412f4603b6b78690d";
 
 type TForm = {
@@ -21,7 +21,7 @@ const getInitialFormState = (aliceDefaultAge: number): TForm => ({
   thirdPartyPrivateKey: THIRD_PARTY_PRIVATE_KEY,
 });
 
-// This function is called when the TPP 🏛 generates the signature 📜
+// This function is called when the TTP 🏛 generates the signature 📜
 export const signBirthYear = async (form: TForm) => {
   const { personEthereumAddress, birthYear, thirdPartyPrivateKey } = form;
   const claimHash = ethers.utils.solidityKeccak256(["address", "uint16"], [personEthereumAddress, birthYear]);
