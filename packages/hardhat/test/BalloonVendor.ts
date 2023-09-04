@@ -28,15 +28,15 @@ describe("BalloonVendor", function () {
       expect(await balloonToken.balanceOf(addr1.address)).to.equal(100);
     });
   });
-  describe("Redeeming tokens", function () {
-    it("should be able to redeem for free as a kid", async function () {
-      await balloonVendor.connect(addr1).redeemFreeToken(validProof);
+  describe("Getting tokens", function () {
+    it("should be able to get for free as a kid", async function () {
+      await balloonVendor.connect(addr1).getFreeToken(validProof);
       expect(await balloonToken.balanceOf(addr1.address)).to.equal(1);
     });
 
     it("should not work with invalid proof", async function () {
       try {
-        await balloonVendor.connect(addr1).redeemFreeToken(invalidProof);
+        await balloonVendor.connect(addr1).getFreeToken(invalidProof);
       } catch (e: any) {
         expect(e.message).to.contain("PROOF_FAILURE");
       }

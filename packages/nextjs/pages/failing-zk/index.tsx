@@ -16,7 +16,7 @@ const ExampleUI: NextPage = () => {
   const [proof, setProof] = useState<string>("");
   const { writeAsync, isLoading } = useScaffoldContractWrite({
     contractName: "BalloonVendor",
-    functionName: "redeemFreeToken",
+    functionName: "getFreeToken",
     args: [proof as `0x${string}`],
     onBlockConfirmation: txnReceipt => {
       console.log("📦 Transaction blockHash", txnReceipt.blockHash);
@@ -25,7 +25,7 @@ const ExampleUI: NextPage = () => {
 
   const { writeAsync: writeAsyncHardcoded, isLoading: isLoadingHardcoded } = useScaffoldContractWrite({
     contractName: "BalloonVendor",
-    functionName: "redeemFreeToken",
+    functionName: "getFreeToken",
     args: [WORKING_PROOF as `0x${string}`],
     onBlockConfirmation: txnReceipt => {
       console.log("📦 Transaction blockHash", txnReceipt.blockHash);

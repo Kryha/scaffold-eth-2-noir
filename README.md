@@ -17,4 +17,4 @@ This is a sandbox educational project for testing age-restricted contracts using
 - If we instead wanted to make an age restricted contract, but checking "older than", what would we need to change?
 - How would you change the contract so that it's possible for the balloon store to have multiple trusted third parties?
 - Try to create the proof manually using `nargo prove` and use that proof to call the contract. Does it work?
-- What happens if Alice, instead of redeeming her balloon, shares her privateKey with Charlie who is 14 y/o, is there something stopping him from getting a free balloon? What could we change or add to this implementation to prevent that from happening?
+- What happens if Alice, instead of getting her balloon token, shares her privateKey with Charlie who is 14 y/o, is there something stopping him from getting a free balloon? What could we change or add to this implementation to prevent that from happening?

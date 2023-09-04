@@ -8,7 +8,7 @@ export const AgeRestrictedContractExecutor = () => {
 
   const { writeAsync, isLoading } = useScaffoldContractWrite({
     contractName: "BalloonVendor",
-    functionName: "redeemFreeToken",
+    functionName: "getFreeToken",
     args: [proof],
     onBlockConfirmation: txnReceipt => {
       console.log("📦 Transaction blockHash", txnReceipt.blockHash);
@@ -24,7 +24,7 @@ export const AgeRestrictedContractExecutor = () => {
           <a className="link" href="https://speedrunethereum.com/challenge/token-vendor">
             Speedrun Ethereum challange
           </a>
-          , with some additions. They&apos;ve added a function <CodeText text="redeemFreeToken" />, with the{" "}
+          , with some additions. They&apos;ve added a function <CodeText text="getFreeToken" />, with the{" "}
           <CodeText text="onlyKids" />
           -modifier. This implementation can be found in{" "}
           <a href="https://github.com/Kryha/scaffold-eth-2-noir/blob/main/packages/hardhat/contracts/BalloonVendor.sol">
