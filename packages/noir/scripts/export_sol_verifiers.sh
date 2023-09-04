@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if command -v nargo &> /dev/null
+if ! command -v nargo &> /dev/null
 then
     echo "nargo could not be found, exiting..."
     echo ""
