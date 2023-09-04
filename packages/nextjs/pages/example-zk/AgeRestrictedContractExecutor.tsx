@@ -4,6 +4,7 @@ import { useBirthYearProofsStore } from "~~/services/store/birth-year-proofs";
 
 export const AgeRestrictedContractExecutor = () => {
   const proof = useBirthYearProofsStore(state => state.proof);
+  const setProof = useBirthYearProofsStore(state => state.setProof);
 
   const { writeAsync, isLoading } = useScaffoldContractWrite({
     contractName: "BalloonVendor",
@@ -45,6 +46,7 @@ export const AgeRestrictedContractExecutor = () => {
                 placeholder="Proof of required birthyear"
                 value={proof}
                 className="input input-bordered"
+                onChange={e => setProof(e.target.value as `0x${string}`)}
               />
             </div>
             <button className="btn btn-primary mt-6" onClick={() => writeAsync()} disabled={isLoading}>
