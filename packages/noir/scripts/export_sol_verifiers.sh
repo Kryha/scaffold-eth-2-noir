@@ -2,7 +2,7 @@
 
 if command -v nargo &> /dev/null
 then
-    echo "nargo could not be found, skipping..."
+    echo "nargo could not be found, exiting..."
     echo ""
     exit 2
 fi
