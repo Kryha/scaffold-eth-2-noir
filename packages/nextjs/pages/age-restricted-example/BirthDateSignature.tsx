@@ -74,8 +74,8 @@ export const BirthDateSignature = ({ aliceDefaultAge }: { aliceDefaultAge: numbe
           When the balloon store implemented their zero knowledge proof solution they made sure that they are using the
           same format as the Town Hall for constructing the claim that is being signed. In this project the claim
           construction for the Town Hall can be found in{" "}
-          <a href="https://github.com/Kryha/scaffold-eth-2-noir/blob/main/packages/nextjs/pages/example-zk/BirthDateSignature.tsx">
-            <CodeText text="packages/nextjs/pages/example-zk/BirthDateSignature.tsx" />
+          <a href="https://github.com/Kryha/scaffold-eth-2-noir/blob/main/packages/nextjs/pages/age-restricted-example/BirthDateSignature.tsx">
+            <CodeText text="packages/nextjs/pages/age-restricted-example/BirthDateSignature.tsx" />
           </a>{" "}
           (
           <CodeText text="signBirthYear" />

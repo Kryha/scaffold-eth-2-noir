@@ -1,6 +1,6 @@
 import CopyToClipboard from "react-copy-to-clipboard";
 import { DocumentDuplicateIcon } from "@heroicons/react/24/outline";
-import { shortenHashString } from "~~/utils/example-zk/short-hash-string";
+import { shortenHashString } from "~~/utils/age-restricted-example/short-hash-string";
 
 type StatProps = {
   stat: string;

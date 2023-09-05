@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { signBirthYear } from "../example-zk/BirthDateSignature";
-import { parseForm } from "../example-zk/GenerateProof";
+import { signBirthYear } from "../age-restricted-example/BirthDateSignature";
+import { parseForm } from "../age-restricted-example/GenerateProof";
 import type { NextPage } from "next";
 import { ParsedArgs, generateProof } from "~~/hooks/noir/useProofGenerator";
 import { useScaffoldContractWrite } from "~~/hooks/scaffold-eth";

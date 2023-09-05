@@ -37,15 +37,15 @@ export const Header = () => {
   const navLinks = (
     <>
       <li>
-        <NavLink href="/debug">
-          <BugAntIcon className="h-4 w-4" />
-          Debug Contracts
+        <NavLink href="/age-restricted-example">
+          <span className="h-4 w-4">🎈</span>
+          Age restriction with ZK
         </NavLink>
       </li>
       <li>
-        <NavLink href="/example-zk">
-          <span className="h-4 w-4">🎈</span>
-          Age restriction with ZK
+        <NavLink href="/debug">
+          <BugAntIcon className="h-4 w-4" />
+          Debug Contracts
         </NavLink>
       </li>
       <li>
