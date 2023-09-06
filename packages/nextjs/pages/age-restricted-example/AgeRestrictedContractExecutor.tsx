@@ -20,18 +20,18 @@ export const AgeRestrictedContractExecutor = () => {
       <div>
         <h1 className="text-3xl font-bold">Step 3: Getting the balloon🎈 NFT</h1>
         <p>
-          The ballon store is using the same <CodeText text="TokenVendor.sol" /> contract as the{" "}
+          The <strong>Ballon Store</strong> is using the same <CodeText text="TokenVendor.sol" /> contract as the{" "}
           <a className="link" href="https://speedrunethereum.com/challenge/token-vendor">
             Speedrun Ethereum challange
           </a>
           , with some additions. They&apos;ve added a function <CodeText text="getFreeToken" />, with the{" "}
           <CodeText text="onlyKids" />
-          -modifier. This implementation can be found in{" "}
+          -modifier. In this project, the implementation can be found in{" "}
           <a href="https://github.com/Kryha/scaffold-eth-2-noir/blob/main/packages/hardhat/contracts/BalloonVendor.sol">
             <CodeText text="packages/hardhat/contracts/BalloonVendor.sol" />
-          </a>{" "}
-          in our project.
-          <br />
+          </a>
+        </p>
+        <p>
           The modifier constructs the public inputs and calls the proof-verifier in (
           <a href="https://github.com/Kryha/scaffold-eth-2-noir/blob/main/packages/hardhat/contracts/verifiers/LessThanSignedAge.sol">
             <CodeText text="packages/hardhat/contracts/verifiers/LessThanSignedAge.sol" />
@@ -40,8 +40,8 @@ export const AgeRestrictedContractExecutor = () => {
           what we are actually proving.
         </p>
         <p>
-          Now that Alice has received a balloon <strong>token</strong>, she can redeem that digital token at the store
-          to get the actual ballloon.
+          Now that <strong>Alice</strong> has received a balloon <strong>token</strong>, she can redeem that digital
+          token at the store to get the actual balloon.
         </p>
       </div>
       <div>

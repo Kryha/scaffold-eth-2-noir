@@ -9,7 +9,7 @@ export const ZkStepsIntro = ({ setCurrentStep, yearTenYearsAgo }: ZkStepsIntroPr
       <div className="hero-content text-center">
         <div className="max-w-3xl">
           <div className="flex flex-col justify-center items-center">
-            <h1 className="text-5xl font-bold">Hello there</h1>
+            <h1 className="text-5xl font-bold">ZK Age Restriction</h1>
             <p className="py-6">
               Alice has heard that balloon store in town is handing out balloons🎈 to anyone who is 10 years old or
               younger. However, Alice does not want to share her age with anyone. Lucky for her, the balloon store has a

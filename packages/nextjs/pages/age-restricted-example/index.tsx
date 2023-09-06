@@ -6,7 +6,7 @@ const ExampleZk: NextPage = () => {
   return (
     <>
       <MetaHeader
-        title="Example UI ZK | Scaffold-ETH 2"
+        title="ZK Age Restriction| Scaffold-ETH 2 Noir"
         description="Example UI ZK, showing how to use ZK circuits in your UI."
       ></MetaHeader>
       <div className="min-h-screen flex items-center flex-col pt-6 lg:pt-20">
