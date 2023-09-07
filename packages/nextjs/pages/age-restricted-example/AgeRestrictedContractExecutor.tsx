@@ -3,15 +3,9 @@ import { CodeText } from "./CodeText";
 import { useScaffoldContractRead, useScaffoldContractWrite } from "~~/hooks/scaffold-eth";
 import { useBirthYearProofsStore } from "~~/services/store/birth-year-proofs";
 
-export const BalloonCount = (props: { sender: string }) => {
-  const { data } = useScaffoldContractRead({
-    contractName: "BalloonToken",
-    functionName: "balanceOf",
-    args: [props.sender],
-  });
-
-  if (data?.toString()) {
-    return <p>Balloon count: {data?.toString()}</p>;
+export const BalloonCount = (props: { count: string | undefined }) => {
+  if (props.count) {
+    return <p>Balloon count: {props.count}</p>;
   }
 
   return <></>;
@@ -22,11 +16,21 @@ export const AgeRestrictedContractExecutor = () => {
   const setProof = useBirthYearProofsStore(state => state.setProof);
   const [sender, setSender] = useState("");
 
+  const { data, refetch } = useScaffoldContractRead({
+    contractName: "BalloonToken",
+    functionName: "balanceOf",
+    args: [sender],
+  });
+
   const { writeAsync, isLoading } = useScaffoldContractWrite({
     contractName: "BalloonVendor",
     functionName: "getFreeToken",
     args: [proof],
     onBlockConfirmation: txnReceipt => {
+      if (sender) {
+        refetch();
+      }
+
       setSender(txnReceipt.from);
       console.log("📦 Transaction blockHash", txnReceipt.blockHash);
     },
@@ -64,7 +68,7 @@ export const AgeRestrictedContractExecutor = () => {
       <div>
         <div className="card w-full shadow-2xl bg-base-300">
           <div className="card-body">
-            <BalloonCount sender={sender} />
+            <BalloonCount count={data?.toString()} />
             <div className="form-control">
               <label className="label">
                 <span className="label-text">Your proof of having the required birth year ✅</span>
