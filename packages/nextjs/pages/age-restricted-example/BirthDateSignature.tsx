@@ -67,12 +67,12 @@ export const BirthDateSignature = ({ aliceDefaultAge }: { aliceDefaultAge: numbe
         <h1 className="text-3xl font-bold">Step 1: Town Hall 🏛 signs 📜 the birth date</h1>
         <p>
           <strong>Alice</strong> and the <strong>Balloon Store</strong> need to agree on who to trust in order to
-          certify Alice age. In this example the <strong>Town Hall</strong> acts as a trusted third party, but on a
-          different scheme the certifying entity could be completely different. The only requirement is that both Alice
+          certify Alice age. In this example the <strong>Town Hall</strong> acts as a trusted third party, but in a
+          different set-up the certifying entity could be completely different. The only requirement is that both Alice
           & the Ballon Store trust the signature (certification) provided by this third party.
         </p>
         <p>
-          The Ballon Store has previously decide to use the same claim format as the Town Hall, to facilitate the zk
+          The Ballon Store has implemented the same claim format as the Town Hall, this enables a more straght forward
           proof verification on a later step. You can find the construction of this claim here:{" "}
           <a href="https://github.com/Kryha/scaffold-eth-2-noir/blob/main/packages/nextjs/pages/age-restricted-example/BirthDateSignature.tsx">
             <CodeText text="packages/nextjs/pages/age-restricted-example/BirthDateSignature.tsx" />

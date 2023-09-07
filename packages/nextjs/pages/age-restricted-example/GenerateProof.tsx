@@ -108,8 +108,8 @@ export const GenerateProof = ({ requiredBirthYear }: { requiredBirthYear: number
         </p>
         <p>
           A circuit written in <strong>Noir</strong> is used for generating the proof and for generating a
-          Solidity-verifier. The <strong>Ballon Store</strong> will use the proof as input to execute the verifier
-          contract on-chain:{" "}
+          proof-verifier. The <strong>Ballon Store</strong> will use the proof as input to execute the verifier contract
+          on-chain:{" "}
           <a href="https://github.com/Kryha/scaffold-eth-2-noir/blob/main/packages/noir/circuits/LessThanSignedAge/src/main.nr">
             <CodeText text="packages/noir/circuits/LessThanSignedAge/src/main.nr" />
           </a>
@@ -118,27 +118,27 @@ export const GenerateProof = ({ requiredBirthYear }: { requiredBirthYear: number
           The proof is generated in the browser using the following libraries:
           <ul>
             <li>
-              * <CodeText text="aztec/bb.js" />
+              - <CodeText text="aztec/bb.js" />
             </li>
             <li>
-              * <CodeText text="noir-lang/acvm_js" />
+              - <CodeText text="noir-lang/acvm_js" />
             </li>
           </ul>
-          Check the implementation here:{" "}
+          Check out the implementation here:{" "}
           <a href="https://github.com/Kryha/scaffold-eth-2-noir/blob/main/packages/nextjs/utils/noir/noirBrowser.ts">
             <CodeText text="packages/nextjs/utils/noir/noirBrowser.ts" />
           </a>
         </p>
         <p>
-          The proof can also be generated locally (outside of a browser), by calling <CodeText text="nargo prove" />.
+          The proof can also be generated locally (outside of a browser) using <CodeText text="nargo" />, the CLI-tool
+          for Noir. Just execute <CodeText text="nargo prove" /> in the terminal.
         </p>
         <p>
           The predefined circuit ABI code used to generate the proof can be found in{" "}
           <a href="https://github.com/Kryha/scaffold-eth-2-noir/blob/main/packages/nextjs/generated/circuits.json">
             <CodeText text="packages/nextjs/generated/circuits.json" />
           </a>
-          , but we could recompile it using <CodeText text="nargo compile" />. <CodeText text="nargo" /> is the CLI-tool
-          for Noir.
+          , but we could recompile it using <CodeText text="nargo compile" />.
         </p>
       </div>
       <div>
