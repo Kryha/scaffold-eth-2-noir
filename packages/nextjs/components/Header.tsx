@@ -39,7 +39,7 @@ export const Header = () => {
       <li>
         <NavLink href="/age-restricted-example">
           <span className="h-4 w-4">🎈</span>
-          Age restriction with ZK
+          ZK Age Restriction
         </NavLink>
       </li>
       <li>

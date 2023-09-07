@@ -64,16 +64,16 @@ export const BirthDateSignature = ({ aliceDefaultAge }: { aliceDefaultAge: numbe
   return (
     <div className="grid grid-cols-2 gap-6 max-w-7xl">
       <div>
-        <h1 className="text-3xl font-bold">Step 1: Town Hall 🏛 generates the signature 📜</h1>
+        <h1 className="text-3xl font-bold">Step 1: Town Hall 🏛 signs 📜 the birth date</h1>
         <p>
-          Alice recognizes that, in order for her to not have to share her age with the balloon store, she at least has
-          to share her age with a trusted third party. In this case, the balloon store has selected the Town Hall to be
-          the trusted third party 🏛. Alice accepts the fact that she has to share her age with the Town Hall.
+          <strong>Alice</strong> and the <strong>Balloon Store</strong> need to agree on who to trust in order to
+          certify Alice&apos; age. In this example the <strong>Town Hall</strong> acts as a trusted third party, but in
+          a different set-up the certifying entity could be completely different. The only requirement is that both
+          Alice & the Ballon Store trust the signature (certification) provided by this third party.
         </p>
         <p>
-          When the balloon store implemented their zero knowledge proof solution they made sure that they are using the
-          same format as the Town Hall for constructing the claim that is being signed. In this project the claim
-          construction for the Town Hall can be found in{" "}
+          The Ballon Store has implemented the same claim format as the Town Hall, this enables the proof verification
+          on a later step. You can find the construction of this claim here:{" "}
           <a href="https://github.com/Kryha/scaffold-eth-2-noir/blob/main/packages/nextjs/pages/age-restricted-example/BirthDateSignature.tsx">
             <CodeText text="packages/nextjs/pages/age-restricted-example/BirthDateSignature.tsx" />
           </a>{" "}
@@ -82,11 +82,9 @@ export const BirthDateSignature = ({ aliceDefaultAge }: { aliceDefaultAge: numbe
           ).
         </p>
         <p>
-          What the Town Hall actually signs is that they confirm that Alice is born in a certain year AND that she has
-          control over a certain Ethereum address. The check of Alice&apos;s Ethereum address is not done in this
-          example. The code for producing the signature currently includes the Town Hall&apos;s hardcoded private key.
-          This can be improved in many ways, but at a minimum it should be the Towna Hall eployee that provides it to
-          the UI.
+          Using it&apos;s <strong>private key</strong>, the <strong>Town Hall</strong> is actually signing the
+          confirmation that <strong>Alice</strong> was born in a given year <strong>AND</strong> that she has control
+          over certain Ethereum <strong>address</strong>.
         </p>
       </div>
       <div>
