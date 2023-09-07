@@ -44,19 +44,25 @@ export const Footer = () => {
             <span>·</span>
             <div>
               <p className="m-0 text-center">
-                Built with <HeartIcon className="inline-block h-4 w-4" /> at 🏰{" "}
+                Built with <HeartIcon className="inline-block h-4 w-4" /> at{" "}
+                <a href="https://kryha.io/" target="_blank" rel="noreferrer" className="underline underline-offset-2">
+                  Kryha
+                </a>
+              </p>
+            </div>
+            <span>·</span>
+            <div>
+              <p className="m-0 text-center">
+                Template from{" "}
                 <a
-                  href="https://buidlguidl.com/"
+                  href="https://scaffoldeth.io"
                   target="_blank"
                   rel="noreferrer"
                   className="underline underline-offset-2"
                 >
-                  BuidlGuidl
+                  scaffold-eth
                 </a>{" "}
-                and{" "}
-                <a href="https://kryha.io/" target="_blank" rel="noreferrer" className="underline underline-offset-2">
-                  Kryha
-                </a>
+                🏗
               </p>
             </div>
           </div>
