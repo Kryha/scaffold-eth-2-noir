@@ -19,7 +19,7 @@
     "@ethersproject/providers": "^5.7.2",
     "@ethersproject/web": "^5.7.1",
     "@heroicons/react": "^2.0.11",
-    "@noir-lang/acvm_js": "git+https://git@github.com/noir-lang/acvm-simulator-wasm.git#b9d9ca9dfc5140839f23998d9466307215607c42",
+    "@noir-lang/acvm_js": "git+https://git@github.com/noir-lang/acvm-js-wasm.git#b9d9ca9dfc5140839f23998d9466307215607c42",
     "@rainbow-me/rainbowkit": "1.0.8",
     "@uniswap/sdk-core": "^4.0.1",
     "@uniswap/v2-sdk": "^3.0.1",

@@ -2985,9 +2985,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@noir-lang/acvm_js@git+https://git@github.com/noir-lang/acvm-simulator-wasm.git#b9d9ca9dfc5140839f23998d9466307215607c42":
+"@noir-lang/acvm_js@git+https://git@github.com/noir-lang/acvm-js-wasm.git#b9d9ca9dfc5140839f23998d9466307215607c42":
   version: 0.0.0-d576736
-  resolution: "@noir-lang/acvm_js@https://git@github.com/noir-lang/acvm-simulator-wasm.git#commit=b9d9ca9dfc5140839f23998d9466307215607c42"
+  resolution: "@noir-lang/acvm_js@https://git@github.com/noir-lang/acvm-js-wasm.git#commit=b9d9ca9dfc5140839f23998d9466307215607c42"
   checksum: 2c7f8ccd48d66533bfc7e0d13418f5d1130e0bdbd3484dd1bc62b45a61d15bb3571036cf17931eca36e57cac319bf130d01614ea7c2dc3bd50ca681d3b60e81b
   languageName: node
   linkType: hard
@@ -3687,7 +3687,7 @@ __metadata:
     "@ethersproject/providers": ^5.7.2
     "@ethersproject/web": ^5.7.1
     "@heroicons/react": ^2.0.11
-    "@noir-lang/acvm_js": "git+https://git@github.com/noir-lang/acvm-simulator-wasm.git#b9d9ca9dfc5140839f23998d9466307215607c42"
+    "@noir-lang/acvm_js": "git+https://git@github.com/noir-lang/acvm-js-wasm.git#b9d9ca9dfc5140839f23998d9466307215607c42"
     "@rainbow-me/rainbowkit": 1.0.8
     "@trivago/prettier-plugin-sort-imports": ^4.1.1
     "@types/node": ^17.0.35
