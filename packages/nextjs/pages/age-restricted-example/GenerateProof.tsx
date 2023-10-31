@@ -50,8 +50,8 @@ export const parseForm = (form: TForm) => {
   const issuer_public_key_x = pub_key_array.slice(1, Math.round(pub_key_array.length / 2));
   const issuer_public_key_y = pub_key_array.slice(Math.round(pub_key_array.length / 2));
   return {
-    required_birth_year: [ethers.utils.hexZeroPad(ethers.utils.hexlify(form.requiredBirthYear), 32)],
-    subject_birth_year: [ethers.utils.hexZeroPad(ethers.utils.hexlify(form.birthYear), 32)],
+    required_birth_year: form.requiredBirthYear,
+    subject_birth_year: form.birthYear,
     issuer_public_key_x,
     issuer_public_key_y,
     subject_eth_address: buildNoirIntArray(form.personEthereumAddress),
@@ -118,10 +118,10 @@ export const GenerateProof = ({ requiredBirthYear }: { requiredBirthYear: number
           The proof is generated in the browser using the following libraries:
           <ul>
             <li>
-              - <CodeText text="aztec/bb.js" />
+              - <CodeText text="noir-lang/backend_barretenberg" />
             </li>
             <li>
-              - <CodeText text="noir-lang/acvm_js" />
+              - <CodeText text="noir-lang/noir_js" />
             </li>
           </ul>
           Check out the implementation here:{" "}
