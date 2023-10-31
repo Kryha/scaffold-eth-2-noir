@@ -36,17 +36,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@aztec/bb.js@npm:^0.3.6":
-  version: 0.3.6
-  resolution: "@aztec/bb.js@npm:0.3.6"
+"@aztec/bb.js@npm:0.8.10":
+  version: 0.8.10
+  resolution: "@aztec/bb.js@npm:0.8.10"
   dependencies:
     comlink: ^4.4.1
     commander: ^10.0.1
     debug: ^4.3.4
-    idb-keyval: ^6.2.1
+    tslib: ^2.4.0
   bin:
-    bb.js: dest/main.js
-  checksum: 49fff5414885025be8cefa1b52ac52265275f2a9121d389b8f6641088a5e4a9c44b25e754c5ff6616e1ccbb0ccfefec4a64a5862903d38fb3f3968a1e608532d
+    bb.js: dest/node/main.js
+  checksum: c77f6e27f626edca1477e4d94794d43b373dfcb527f00579e20270fc92794f9e4bc5df2c25ebbce564700c114cdf69e0b213ddb0192c24af4fc4cdf468918702
   languageName: node
   linkType: hard
 
@@ -2985,10 +2985,48 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@noir-lang/acvm_js@git+https://git@github.com/noir-lang/acvm-js-wasm.git#b9d9ca9dfc5140839f23998d9466307215607c42":
-  version: 0.0.0-d576736
-  resolution: "@noir-lang/acvm_js@https://git@github.com/noir-lang/acvm-js-wasm.git#commit=b9d9ca9dfc5140839f23998d9466307215607c42"
-  checksum: 2c7f8ccd48d66533bfc7e0d13418f5d1130e0bdbd3484dd1bc62b45a61d15bb3571036cf17931eca36e57cac319bf130d01614ea7c2dc3bd50ca681d3b60e81b
+"@noir-lang/acvm_js@npm:0.29.0":
+  version: 0.29.0
+  resolution: "@noir-lang/acvm_js@npm:0.29.0"
+  checksum: 8ea2944c2f4bfb3f1160010711ab725f52925fbe214cb920116d14c20cddb1515c61718010dd6a4ccdaf8a56759adfe005d238a3fc9670dd7071dff7d84d4cfd
+  languageName: node
+  linkType: hard
+
+"@noir-lang/backend_barretenberg@npm:^0.17.0":
+  version: 0.17.0
+  resolution: "@noir-lang/backend_barretenberg@npm:0.17.0"
+  dependencies:
+    "@aztec/bb.js": 0.8.10
+    "@noir-lang/types": 0.17.0
+    fflate: ^0.8.0
+  checksum: 4ad3a30a0cf502de49caced3ffdeffb6daa679362470b02bcfcbbe67daf7283661c3f8767cedd9410cb7b004268ec83832e2a9dadae97f44df66a3a3e4c272d1
+  languageName: node
+  linkType: hard
+
+"@noir-lang/noir_js@npm:^0.17.0":
+  version: 0.17.0
+  resolution: "@noir-lang/noir_js@npm:0.17.0"
+  dependencies:
+    "@noir-lang/acvm_js": 0.29.0
+    "@noir-lang/noirc_abi": 0.17.0
+    "@noir-lang/types": 0.17.0
+  checksum: 9ecaeca11b5740fb99d4198377cf8bb1116b668dd7d9dcc1f80e6a515893e5eb9b70f3db066643239c75b6008c3c2ccb719f5d4d4e51324a61ca31d26c7ecf2a
+  languageName: node
+  linkType: hard
+
+"@noir-lang/noirc_abi@npm:0.17.0":
+  version: 0.17.0
+  resolution: "@noir-lang/noirc_abi@npm:0.17.0"
+  checksum: d7e1692f2c1c098b400918593bc20107c28fc12238b0dffbe1676cc134d4d121fa0d36c537b4e355d278014da83fe1a404432355f121de6d51326dd9486b47bc
+  languageName: node
+  linkType: hard
+
+"@noir-lang/types@npm:0.17.0":
+  version: 0.17.0
+  resolution: "@noir-lang/types@npm:0.17.0"
+  dependencies:
+    "@noir-lang/noirc_abi": 0.17.0
+  checksum: 9bc06cbfe77e447614c5751f451ec1f195803b3eea242cac8c8065b4d5c23fbf12aff6c24cfa9a009234180506daeb60d822f01b689b35121bb85b9acf591894
   languageName: node
   linkType: hard
 
@@ -3682,12 +3720,12 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@se-2/nextjs@workspace:packages/nextjs"
   dependencies:
-    "@aztec/bb.js": ^0.3.6
     "@ethersproject/networks": ^5.7.1
     "@ethersproject/providers": ^5.7.2
     "@ethersproject/web": ^5.7.1
     "@heroicons/react": ^2.0.11
-    "@noir-lang/acvm_js": "git+https://git@github.com/noir-lang/acvm-js-wasm.git#b9d9ca9dfc5140839f23998d9466307215607c42"
+    "@noir-lang/backend_barretenberg": ^0.17.0
+    "@noir-lang/noir_js": ^0.17.0
     "@rainbow-me/rainbowkit": 1.0.8
     "@trivago/prettier-plugin-sort-imports": ^4.1.1
     "@types/node": ^17.0.35
@@ -11179,13 +11217,6 @@ __metadata:
   peerDependencies:
     postcss: ^8.1.0
   checksum: 5c324d283552b1269cfc13a503aaaa172a280f914e5b81544f3803bc6f06a3b585fb79f66f7c771a2c052db7982c18bf92d001e3b47282e3abbbb4c4cc488d68
-  languageName: node
-  linkType: hard
-
-"idb-keyval@npm:^6.2.1":
-  version: 6.2.1
-  resolution: "idb-keyval@npm:6.2.1"
-  checksum: 7c0836f832096086e99258167740181132a71dd2694c8b8454a4f5ec69114ba6d70983115153306f0b6de1c8d3bad04f67eed3dff8f50c96815b9985d6d78470
   languageName: node
   linkType: hard
 

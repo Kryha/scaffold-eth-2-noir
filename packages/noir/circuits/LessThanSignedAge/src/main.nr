@@ -68,6 +68,14 @@ fn main(
       issuer_signed_message,
       claim_payload,
     );
+    // TODO: use below code when this issue is resolved: https://github.com/Kryha/scaffold-eth-2-noir/issues/12
+    // let is_verified = std::ecdsa_secp256k1::verify_signature(
+    //   issuer_public_key_x,
+    //   issuer_public_key_y,
+    //   issuer_signed_message,
+    //   claim_payload,
+    // );
+    // assert(is_verified);
 }
 
 #[test]

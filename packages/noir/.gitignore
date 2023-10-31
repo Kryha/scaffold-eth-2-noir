@@ -3,8 +3,6 @@ node_modules
 coverage
 coverage.json
 temp
-*Prover.toml
-*Verifier.toml
 *plonk_vk.sol
 circuits/**/target*
 circuits/**/proofs*

@@ -2,6 +2,8 @@ pragma solidity >=0.8.4;
 // SPDX-License-Identifier: MIT
 
 import "@openzeppelin/contracts/access/Ownable.sol";
+import "hardhat/console.sol";
+
 import "./BalloonToken.sol";
 import "./verifiers/LessThanSignedAge.sol";
 
