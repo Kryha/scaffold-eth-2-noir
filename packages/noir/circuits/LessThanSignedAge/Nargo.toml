@@ -1,7 +1,7 @@
 [package]
 name = "LessThanSignedAge"
 type = "bin"
-authors = [""]
-compiler_version = "0.9.0"
+authors = ["Kryha"]
+compiler_version = "0.17.0"
 
 [dependencies]
