@@ -2,6 +2,9 @@
 
 This is a sandbox educational project for testing age-restricted contracts using [Noir](https://noir-lang.org/), a Domain Specific Language for writing ZKP-circuits. This project was built using Scaffold-ETH 2, [refer to SE2 README for set-up](https://github.com/scaffold-eth/scaffold-eth-2#readme).
 
+In the UI a story is told of how Alice gets a free balloon. But you can also see the overview below.
+![Overview](./overview.png)
+
 # Running the project
 1. Run `yarn && yarn chain` in terminal 1 to start the hardhat chain locally
 2. Run `yarn deploy --reset` in terminal 2 to deploy the contracts

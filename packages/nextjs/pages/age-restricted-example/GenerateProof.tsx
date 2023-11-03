@@ -125,8 +125,8 @@ export const GenerateProof = ({ requiredBirthYear }: { requiredBirthYear: number
             </li>
           </ul>
           Check out the implementation here:{" "}
-          <a href="https://github.com/Kryha/scaffold-eth-2-noir/blob/main/packages/nextjs/utils/noir/noirBrowser.ts">
-            <CodeText text="packages/nextjs/utils/noir/noirBrowser.ts" />
+          <a href="https://github.com/Kryha/scaffold-eth-2-noir/blob/main/packages/nextjs/hooks/noir/useProofGenerator.ts">
+            <CodeText text="packages/nextjs/hooks/noir/useProofGenerator.ts" />
           </a>
         </p>
         <p>
